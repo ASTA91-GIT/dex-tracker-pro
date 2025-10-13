@@ -1,73 +1,51 @@
-# Welcome to your Lovable project
+# ⚡️ PokéTrack — The Ultimate Pokédex Experience  
+> _“Every Pokémon has a story — your job is to catch it, log it, and live it!”_
 
-## Project info
+Welcome, Trainer! 👋  
+**PokéTrack** is your all-in-one Pokédex and Pokémon companion app — built for modern Trainers who want to **track, collect, and master** all Pokémon from Gen 1 to the latest releases.  
 
-**URL**: https://lovable.dev/projects/6f6d6a42-0d4e-466f-9fe8-64fa172c344a
+---
 
-## How can I edit this code?
+## 🌈 Features That Would Make Even Professor Oak Proud
 
-There are several ways of editing your application.
+### 🎮 Become a True Trainer
+- Sign up, log in, and create your personal **Trainer Profile** using **Supabase Auth**.  
+- Level up as you catch and favorite Pokémon — earn badges, track milestones, and show off your collection.
 
-**Use Lovable**
+### 🧭 The Full Pokédex
+- Over **900+ Pokémon** including **Mega Evolutions**, **Gigantamax Forms**, and **Regional Variants**.  
+- Dynamic Pokédex cards featuring types, base stats, and sprites from the **PokéAPI**.  
+- Search, sort, and filter by **type, generation, region, or stat**.  
+- View shiny forms, alternate art, and full evolution chains.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/6f6d6a42-0d4e-466f-9fe8-64fa172c344a) and start prompting.
+### ❤️ Your Pokémon, Your Way
+- Mark Pokémon as **Caught**, **Favorite**, or **Wanted**.  
+- Watch your PokéDex completion grow with animated progress bars and badges.  
+- Compare Pokémon stats head-to-head and plan your dream team.  
 
-Changes made via Lovable will be committed automatically to this repo.
+### 🌗 Immersive UI
+- Fully responsive design built with **React** + **Tailwind CSS** + **Framer Motion**.  
+- Pokémon-inspired color palette: Pikachu Yellow ⚡, Poké Red 🔴, Cerulean Blue 🔵.  
+- Dark/Light Mode toggle styled like a Pokéball.  
+- Smooth transitions and glowing hover effects that feel straight out of a Poké Center.
 
-**Use your preferred IDE**
+---
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 🧩 Tech Stack
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+| Layer | Technology | Description |
+|:------|:------------|:-------------|
+| Frontend | **React** + **Tailwind CSS** + **Framer Motion** | Modern, responsive, animated UI |
+| Backend | **Supabase** | Authentication + Database + Realtime |
+| API | **PokéAPI** | Fetches Pokémon data, stats, evolutions, and forms |
+| Deployment | **Vercel** | Fast, serverless deployment |
+| Database Schema | `users`, `caught_pokemon`, `favorites`, `wanted_pokemon`, `badges` | Tracks trainer progress |
 
-Follow these steps:
+---
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## ⚙️ Setup Guide
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/6f6d6a42-0d4e-466f-9fe8-64fa172c344a) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+### 1️⃣ Clone the repo
+```bash
+git clone https://github.com/ASTA91-GIT/dex-tracker-pro.git
+cd dex-tracker-pro
