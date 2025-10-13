@@ -14,7 +14,164 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      caught_pokemon: {
+        Row: {
+          caught_at: string | null
+          id: string
+          pokemon_id: number
+          pokemon_name: string
+          user_id: string
+        }
+        Insert: {
+          caught_at?: string | null
+          id?: string
+          pokemon_id: number
+          pokemon_name: string
+          user_id: string
+        }
+        Update: {
+          caught_at?: string | null
+          id?: string
+          pokemon_id?: number
+          pokemon_name?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "caught_pokemon_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      favorites: {
+        Row: {
+          added_at: string | null
+          id: string
+          pokemon_id: number
+          pokemon_name: string
+          user_id: string
+        }
+        Insert: {
+          added_at?: string | null
+          id?: string
+          pokemon_id: number
+          pokemon_name: string
+          user_id: string
+        }
+        Update: {
+          added_at?: string | null
+          id?: string
+          pokemon_id?: number
+          pokemon_name?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "favorites_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      profiles: {
+        Row: {
+          avatar_url: string | null
+          created_at: string | null
+          id: string
+          level: number | null
+          updated_at: string | null
+          username: string
+          xp: number | null
+        }
+        Insert: {
+          avatar_url?: string | null
+          created_at?: string | null
+          id: string
+          level?: number | null
+          updated_at?: string | null
+          username: string
+          xp?: number | null
+        }
+        Update: {
+          avatar_url?: string | null
+          created_at?: string | null
+          id?: string
+          level?: number | null
+          updated_at?: string | null
+          username?: string
+          xp?: number | null
+        }
+        Relationships: []
+      }
+      user_badges: {
+        Row: {
+          badge_name: string
+          badge_type: string
+          earned_at: string | null
+          id: string
+          user_id: string
+        }
+        Insert: {
+          badge_name: string
+          badge_type: string
+          earned_at?: string | null
+          id?: string
+          user_id: string
+        }
+        Update: {
+          badge_name?: string
+          badge_type?: string
+          earned_at?: string | null
+          id?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "user_badges_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      wanted_pokemon: {
+        Row: {
+          added_at: string | null
+          id: string
+          pokemon_id: number
+          pokemon_name: string
+          user_id: string
+        }
+        Insert: {
+          added_at?: string | null
+          id?: string
+          pokemon_id: number
+          pokemon_name: string
+          user_id: string
+        }
+        Update: {
+          added_at?: string | null
+          id?: string
+          pokemon_id?: number
+          pokemon_name?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "wanted_pokemon_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
     }
     Views: {
       [_ in never]: never
