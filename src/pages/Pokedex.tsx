@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Search, Loader2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { useNavigate } from "react-router-dom";
 
 interface Pokemon {
   name: string;
@@ -41,6 +42,7 @@ const Pokedex = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [loading, setLoading] = useState(true);
   const { toast } = useToast();
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetchPokemon();
@@ -56,8 +58,8 @@ const Pokedex = () => {
   const fetchPokemon = async () => {
     try {
       setLoading(true);
-      // Fetch first 151 Pokemon (Gen 1)
-      const response = await fetch("https://pokeapi.co/api/v2/pokemon?limit=151");
+      // Fetch all Pokemon (1-1025 for now)
+      const response = await fetch("https://pokeapi.co/api/v2/pokemon?limit=1025");
       const data = await response.json();
 
       // Fetch details for each Pokemon
@@ -69,7 +71,8 @@ const Pokedex = () => {
             name: p.name,
             url: p.url,
             id: detailsData.id,
-            image: detailsData.sprites.other["official-artwork"].front_default,
+            image: detailsData.sprites.other["official-artwork"].front_default ||
+                   detailsData.sprites.front_default,
             types: detailsData.types.map((t: any) => t.type.name),
           };
         })
@@ -129,6 +132,7 @@ const Pokedex = () => {
               {filteredPokemon.map((p) => (
                 <Card
                   key={p.id}
+                  onClick={() => navigate(`/pokemon/${p.id}`)}
                   className="hover-float cursor-pointer border-2 border-border hover:border-primary transition-all bg-card overflow-hidden group"
                 >
                   <CardContent className="p-4">

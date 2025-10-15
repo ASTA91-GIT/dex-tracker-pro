@@ -1,43 +1,58 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Navigation } from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { useToast } from "@/hooks/use-toast";
 import { Mail, Lock, User } from "lucide-react";
+import { useAuth } from "@/hooks/useAuth";
+import { useNavigate } from "react-router-dom";
 
 const Auth = () => {
   const [isLoading, setIsLoading] = useState(false);
-  const { toast } = useToast();
+  const { signUp, signIn, user } = useAuth();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (user) {
+      navigate("/dashboard");
+    }
+  }, [user, navigate]);
 
   const handleSignUp = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsLoading(true);
     
-    // Placeholder - will be implemented with Supabase
-    setTimeout(() => {
-      toast({
-        title: "Coming Soon!",
-        description: "Authentication will be set up with your Lovable Cloud backend.",
-      });
+    const formData = new FormData(e.currentTarget);
+    const email = formData.get("email") as string;
+    const password = formData.get("password") as string;
+    const username = formData.get("username") as string;
+
+    try {
+      await signUp(email, password, username);
+    } catch (error) {
+      console.error("Sign up error:", error);
+    } finally {
       setIsLoading(false);
-    }, 1000);
+    }
   };
 
   const handleSignIn = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsLoading(true);
     
-    // Placeholder - will be implemented with Supabase
-    setTimeout(() => {
-      toast({
-        title: "Coming Soon!",
-        description: "Authentication will be set up with your Lovable Cloud backend.",
-      });
+    const formData = new FormData(e.currentTarget);
+    const email = formData.get("email") as string;
+    const password = formData.get("password") as string;
+
+    try {
+      await signIn(email, password);
+    } catch (error) {
+      console.error("Sign in error:", error);
+    } finally {
       setIsLoading(false);
-    }, 1000);
+    }
   };
 
   return (
@@ -77,6 +92,7 @@ const Auth = () => {
                         <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
                         <Input
                           id="signin-email"
+                          name="email"
                           type="email"
                           placeholder="trainer@pokemon.com"
                           className="pl-10"
@@ -90,6 +106,7 @@ const Auth = () => {
                         <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
                         <Input
                           id="signin-password"
+                          name="password"
                           type="password"
                           placeholder="••••••••"
                           className="pl-10"
@@ -115,6 +132,7 @@ const Auth = () => {
                         <User className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
                         <Input
                           id="signup-name"
+                          name="username"
                           type="text"
                           placeholder="Ash Ketchum"
                           className="pl-10"
@@ -128,6 +146,7 @@ const Auth = () => {
                         <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
                         <Input
                           id="signup-email"
+                          name="email"
                           type="email"
                           placeholder="trainer@pokemon.com"
                           className="pl-10"
@@ -141,10 +160,12 @@ const Auth = () => {
                         <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
                         <Input
                           id="signup-password"
+                          name="password"
                           type="password"
                           placeholder="••••••••"
                           className="pl-10"
                           required
+                          minLength={6}
                         />
                       </div>
                     </div>

@@ -1,15 +1,25 @@
 import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import pokeballIcon from "@/assets/pokeball-icon.png";
+import { useAuth } from "@/hooks/useAuth";
+import { Button } from "@/components/ui/button";
+import { LogOut } from "lucide-react";
 
 export const Navigation = () => {
   const location = useLocation();
+  const { user, signOut } = useAuth();
 
-  const navItems = [
-    { path: "/", label: "Home" },
-    { path: "/pokedex", label: "Pokédex" },
-    { path: "/auth", label: "Trainer Login" },
-  ];
+  const navItems = user
+    ? [
+        { path: "/", label: "Home" },
+        { path: "/pokedex", label: "Pokédex" },
+        { path: "/dashboard", label: "Dashboard" },
+      ]
+    : [
+        { path: "/", label: "Home" },
+        { path: "/pokedex", label: "Pokédex" },
+        { path: "/auth", label: "Trainer Login" },
+      ];
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
@@ -24,7 +34,7 @@ export const Navigation = () => {
           </Link>
 
           {/* Navigation Links */}
-          <div className="flex items-center gap-2 md:gap-6">
+          <div className="flex items-center gap-2 md:gap-4">
             {navItems.map((item) => (
               <Link
                 key={item.path}
@@ -39,6 +49,17 @@ export const Navigation = () => {
                 {item.label}
               </Link>
             ))}
+            {user && (
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => signOut()}
+                className="text-sm md:text-base"
+              >
+                <LogOut className="h-4 w-4 mr-2" />
+                Logout
+              </Button>
+            )}
           </div>
         </div>
       </div>
