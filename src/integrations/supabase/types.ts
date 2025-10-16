@@ -46,6 +46,36 @@ export type Database = {
           },
         ]
       }
+      daily_challenges: {
+        Row: {
+          challenge_date: string
+          challenge_type: string
+          completed: boolean
+          completed_at: string | null
+          id: string
+          reward_xp: number
+          user_id: string
+        }
+        Insert: {
+          challenge_date: string
+          challenge_type: string
+          completed?: boolean
+          completed_at?: string | null
+          id?: string
+          reward_xp?: number
+          user_id: string
+        }
+        Update: {
+          challenge_date?: string
+          challenge_type?: string
+          completed?: boolean
+          completed_at?: string | null
+          id?: string
+          reward_xp?: number
+          user_id?: string
+        }
+        Relationships: []
+      }
       favorites: {
         Row: {
           added_at: string | null
@@ -78,6 +108,30 @@ export type Database = {
           },
         ]
       }
+      legendary_pokemon: {
+        Row: {
+          caught_at: string
+          id: string
+          pokemon_id: number
+          pokemon_name: string
+          user_id: string
+        }
+        Insert: {
+          caught_at?: string
+          id?: string
+          pokemon_id: number
+          pokemon_name: string
+          user_id: string
+        }
+        Update: {
+          caught_at?: string
+          id?: string
+          pokemon_id?: number
+          pokemon_name?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
       profiles: {
         Row: {
           avatar_url: string | null
@@ -105,6 +159,84 @@ export type Database = {
           updated_at?: string | null
           username?: string
           xp?: number | null
+        }
+        Relationships: []
+      }
+      quiz_scores: {
+        Row: {
+          completed_at: string
+          id: string
+          quiz_type: string
+          score: number
+          total_questions: number
+          user_id: string
+        }
+        Insert: {
+          completed_at?: string
+          id?: string
+          quiz_type: string
+          score: number
+          total_questions: number
+          user_id: string
+        }
+        Update: {
+          completed_at?: string
+          id?: string
+          quiz_type?: string
+          score?: number
+          total_questions?: number
+          user_id?: string
+        }
+        Relationships: []
+      }
+      shiny_pokemon: {
+        Row: {
+          caught_at: string
+          id: string
+          pokemon_id: number
+          pokemon_name: string
+          user_id: string
+        }
+        Insert: {
+          caught_at?: string
+          id?: string
+          pokemon_id: number
+          pokemon_name: string
+          user_id: string
+        }
+        Update: {
+          caught_at?: string
+          id?: string
+          pokemon_id?: number
+          pokemon_name?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      teams: {
+        Row: {
+          created_at: string
+          id: string
+          pokemon_slots: Json
+          team_name: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          pokemon_slots?: Json
+          team_name: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          pokemon_slots?: Json
+          team_name?: string
+          updated_at?: string
+          user_id?: string
         }
         Relationships: []
       }
