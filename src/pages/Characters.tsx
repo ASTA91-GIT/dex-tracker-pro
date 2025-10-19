@@ -3,6 +3,7 @@ import { Navigation } from '@/components/Navigation';
 import { Card } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
+import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import { Search } from 'lucide-react';
 
 interface Character {
@@ -11,7 +12,6 @@ interface Character {
   role: string;
   team: string[];
   series: string;
-  image: string;
 }
 
 const characters: Character[] = [
@@ -20,104 +20,91 @@ const characters: Character[] = [
     region: 'Kanto, Johto, Hoenn, Sinnoh, Unova, Kalos, Alola, Galar',
     role: 'Protagonist',
     team: ['Pikachu', 'Charizard', 'Greninja', 'Lucario', 'Infernape', 'Sceptile'],
-    series: 'Original Series - Journeys',
-    image: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png'
+    series: 'Original Series - Journeys'
   },
   {
     name: 'Misty',
     region: 'Kanto, Johto',
     role: 'Gym Leader',
     team: ['Psyduck', 'Staryu', 'Starmie', 'Gyarados', 'Corsola', 'Azurill'],
-    series: 'Original Series',
-    image: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/121.png'
+    series: 'Original Series'
   },
   {
     name: 'Brock',
     region: 'Kanto, Johto, Hoenn, Sinnoh',
     role: 'Gym Leader / Pokémon Doctor',
     team: ['Onix', 'Geodude', 'Crobat', 'Marshtomp', 'Sudowoodo', 'Croagunk'],
-    series: 'Original Series - Diamond & Pearl',
-    image: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/95.png'
+    series: 'Original Series - Diamond & Pearl'
   },
   {
     name: 'May',
     region: 'Hoenn, Kanto, Johto',
     role: 'Coordinator',
     team: ['Blaziken', 'Beautifly', 'Skitty', 'Munchlax', 'Venusaur', 'Glaceon'],
-    series: 'Advanced Generation',
-    image: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/257.png'
+    series: 'Advanced Generation'
   },
   {
     name: 'Dawn',
     region: 'Sinnoh',
     role: 'Coordinator',
     team: ['Piplup', 'Buneary', 'Pachirisu', 'Mamoswine', 'Quilava', 'Togekiss'],
-    series: 'Diamond & Pearl',
-    image: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/393.png'
+    series: 'Diamond & Pearl'
   },
   {
     name: 'Serena',
     region: 'Kalos',
     role: 'Performer',
     team: ['Braixen', 'Pancham', 'Sylveon', 'Delphox'],
-    series: 'XY',
-    image: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/655.png'
+    series: 'XY'
   },
   {
     name: 'Clemont',
     region: 'Kalos',
     role: 'Gym Leader / Inventor',
     team: ['Dedenne', 'Bunnelby', 'Chespin', 'Luxray', 'Heliolisk'],
-    series: 'XY',
-    image: 'https://raw.githubusercontent.com/PokeAPI/sprites/meta/sprites/pokemon/other/official-artwork/702.png'
+    series: 'XY'
   },
   {
     name: 'Iris',
     region: 'Unova',
     role: 'Dragon Master / Champion',
     team: ['Axew', 'Excadrill', 'Emolga', 'Dragonite', 'Haxorus'],
-    series: 'Best Wishes',
-    image: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/612.png'
+    series: 'Best Wishes'
   },
   {
     name: 'Cilan',
     region: 'Unova',
     role: 'Gym Leader / Connoisseur',
     team: ['Pansage', 'Crustle', 'Stunfisk', 'Simisage'],
-    series: 'Best Wishes',
-    image: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/511.png'
+    series: 'Best Wishes'
   },
   {
     name: 'Goh',
     region: 'Kanto, Various',
     role: 'Pokémon Researcher',
     team: ['Cinderace', 'Inteleon', 'Grookey', 'Suicune', 'Eternatus'],
-    series: 'Journeys',
-    image: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/815.png'
+    series: 'Journeys'
   },
   {
     name: 'Chloe',
     region: 'Kanto',
     role: 'Trainer',
     team: ['Eevee', 'Yamper'],
-    series: 'Journeys',
-    image: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/133.png'
+    series: 'Journeys'
   },
   {
     name: 'Leon',
     region: 'Galar',
     role: 'Champion',
     team: ['Charizard', 'Dragapult', 'Rillaboom', 'Cinderace', 'Inteleon', 'Mr. Rime'],
-    series: 'Journeys',
-    image: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png'
+    series: 'Journeys'
   },
   {
     name: 'Cynthia',
     region: 'Sinnoh',
     role: 'Champion',
     team: ['Garchomp', 'Lucario', 'Spiritomb', 'Milotic', 'Togekiss', 'Roserade'],
-    series: 'Diamond & Pearl, Journeys',
-    image: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/445.png'
+    series: 'Diamond & Pearl, Journeys'
   }
 ];
 
@@ -152,11 +139,11 @@ const Characters = () => {
           {filteredCharacters.map((character) => (
             <Card key={character.name} className="p-6 hover:scale-105 transition-transform">
               <div className="text-center mb-4">
-                <img
-                  src={character.image}
-                  alt={character.name}
-                  className="w-32 h-32 mx-auto mb-4"
-                />
+                <Avatar className="w-32 h-32 mx-auto mb-4">
+                  <AvatarFallback className="text-4xl font-bold bg-gradient-to-br from-primary to-secondary">
+                    {character.name.split(' ').map(n => n[0]).join('')}
+                  </AvatarFallback>
+                </Avatar>
                 <h2 className="text-2xl font-bold mb-2">{character.name}</h2>
                 <Badge className="mb-2">{character.role}</Badge>
               </div>
