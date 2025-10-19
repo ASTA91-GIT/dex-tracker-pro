@@ -17,6 +17,10 @@ import BattleSimulator from "./pages/BattleSimulator";
 import Leaderboard from "./pages/Leaderboard";
 import Characters from "./pages/Characters";
 import News from "./pages/News";
+import RandomPokemon from "./pages/RandomPokemon";
+import Collection from "./pages/Collection";
+import EvolutionStones from "./pages/EvolutionStones";
+import PokemonLore from "./pages/PokemonLore";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -42,6 +46,10 @@ const App = () => (
             <Route path="/leaderboard" element={<Leaderboard />} />
             <Route path="/characters" element={<Characters />} />
             <Route path="/news" element={<News />} />
+            <Route path="/random" element={<RandomPokemon />} />
+            <Route path="/collection" element={<Collection />} />
+            <Route path="/evolution-stones" element={<EvolutionStones />} />
+            <Route path="/lore" element={<PokemonLore />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

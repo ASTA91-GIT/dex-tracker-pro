@@ -1,329 +1,232 @@
-import { useState, useEffect } from "react";
-import { Navigation } from "@/components/Navigation";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Progress } from "@/components/ui/progress";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { useAuth } from "@/hooks/useAuth";
-import { supabase } from "@/integrations/supabase/client";
-import { Trophy, Star, Target, TrendingUp, Heart, Zap } from "lucide-react";
-import { useNavigate } from "react-router-dom";
-import { toast } from "sonner";
+import { useState, useEffect } from 'react';
+import { Navigation } from '@/components/Navigation';
+import { Card } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Progress } from '@/components/ui/progress';
+import { Button } from '@/components/ui/button';
+import { supabase } from '@/integrations/supabase/client';
+import { useNavigate } from 'react-router-dom';
+import { Trophy, Star, Zap, Crown, Target, Award } from 'lucide-react';
+import { toast } from 'sonner';
 
-interface Profile {
-  username: string;
+interface UserStats {
   level: number;
   xp: number;
-  avatar_url?: string;
+  username: string;
+  caughtCount: number;
+  shinyCount: number;
+  legendaryCount: number;
+  badgeCount: number;
+  quizScore: number;
+  teamsCount: number;
 }
 
-interface PokemonItem {
+interface DailyChallenge {
   id: string;
-  pokemon_id: number;
-  pokemon_name: string;
-  caught_at?: string;
-  added_at?: string;
-}
-
-interface BadgeItem {
-  id: string;
-  badge_name: string;
-  badge_type: string;
-  earned_at: string;
+  challenge_type: string;
+  completed: boolean;
+  reward_xp: number;
 }
 
 const Dashboard = () => {
-  const { user, loading: authLoading } = useAuth();
   const navigate = useNavigate();
-  const [profile, setProfile] = useState<Profile | null>(null);
-  const [caughtPokemon, setCaughtPokemon] = useState<PokemonItem[]>([]);
-  const [favorites, setFavorites] = useState<PokemonItem[]>([]);
-  const [wanted, setWanted] = useState<PokemonItem[]>([]);
-  const [badges, setBadges] = useState<BadgeItem[]>([]);
+  const [stats, setStats] = useState<UserStats>({
+    level: 1,
+    xp: 0,
+    username: 'Trainer',
+    caughtCount: 0,
+    shinyCount: 0,
+    legendaryCount: 0,
+    badgeCount: 0,
+    quizScore: 0,
+    teamsCount: 0
+  });
+  const [challenges, setChallenges] = useState<DailyChallenge[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    if (!authLoading && !user) {
-      navigate("/auth");
-    } else if (user) {
-      loadUserData();
+    fetchUserData();
+  }, []);
+
+  const fetchUserData = async () => {
+    const { data: { user } } = await supabase.auth.getUser();
+    if (!user) {
+      navigate('/auth');
+      return;
     }
-  }, [user, authLoading, navigate]);
 
-  const loadUserData = async () => {
-    if (!user) return;
+    const [profileData, caughtData, shinyData, legendaryData, badgeData, quizData, teamsData, challengesData] = await Promise.all([
+      supabase.from('profiles').select('*').eq('id', user.id).single(),
+      supabase.from('caught_pokemon').select('*').eq('user_id', user.id),
+      supabase.from('shiny_pokemon').select('*').eq('user_id', user.id),
+      supabase.from('legendary_pokemon').select('*').eq('user_id', user.id),
+      supabase.from('user_badges').select('*').eq('user_id', user.id),
+      supabase.from('quiz_scores').select('*').eq('user_id', user.id).order('score', { ascending: false }).limit(1),
+      supabase.from('teams').select('*').eq('user_id', user.id),
+      supabase.from('daily_challenges').select('*').eq('user_id', user.id).eq('challenge_date', new Date().toISOString().split('T')[0])
+    ]);
 
-    try {
-      setLoading(true);
+    setStats({
+      level: profileData.data?.level || 1,
+      xp: profileData.data?.xp || 0,
+      username: profileData.data?.username || 'Trainer',
+      caughtCount: caughtData.data?.length || 0,
+      shinyCount: shinyData.data?.length || 0,
+      legendaryCount: legendaryData.data?.length || 0,
+      badgeCount: badgeData.data?.length || 0,
+      quizScore: quizData.data?.[0]?.score || 0,
+      teamsCount: teamsData.data?.length || 0
+    });
 
-      // Fetch profile
-      const { data: profileData } = await supabase
-        .from("profiles")
-        .select("*")
-        .eq("id", user.id)
-        .single();
+    if (challengesData.data?.length === 0) {
+      await generateDailyChallenges(user.id);
+    } else {
+      setChallenges(challengesData.data || []);
+    }
 
-      if (profileData) setProfile(profileData);
+    setLoading(false);
+  };
 
-      // Fetch caught pokemon
-      const { data: caughtData } = await supabase
-        .from("caught_pokemon")
-        .select("*")
-        .eq("user_id", user.id)
-        .order("caught_at", { ascending: false });
+  const generateDailyChallenges = async (userId: string) => {
+    const challengeTypes = [
+      { type: 'catch_5_pokemon', xp: 50 },
+      { type: 'complete_quiz', xp: 100 },
+      { type: 'guess_pokemon', xp: 75 },
+      { type: 'create_team', xp: 80 }
+    ];
 
-      if (caughtData) setCaughtPokemon(caughtData);
+    const dailyChallenges = challengeTypes.slice(0, 3).map(challenge => ({
+      user_id: userId,
+      challenge_date: new Date().toISOString().split('T')[0],
+      challenge_type: challenge.type,
+      completed: false,
+      reward_xp: challenge.xp
+    }));
 
-      // Fetch favorites
-      const { data: favData } = await supabase
-        .from("favorites")
-        .select("*")
-        .eq("user_id", user.id)
-        .order("added_at", { ascending: false });
+    const { data } = await supabase.from('daily_challenges').insert(dailyChallenges).select();
+    setChallenges(data || []);
+  };
 
-      if (favData) setFavorites(favData);
+  const completeChallenge = async (challengeId: string, rewardXp: number) => {
+    const { error } = await supabase
+      .from('daily_challenges')
+      .update({ completed: true, completed_at: new Date().toISOString() })
+      .eq('id', challengeId);
 
-      // Fetch wanted
-      const { data: wantedData } = await supabase
-        .from("wanted_pokemon")
-        .select("*")
-        .eq("user_id", user.id)
-        .order("added_at", { ascending: false });
+    if (!error) {
+      const newXp = stats.xp + rewardXp;
+      const newLevel = Math.floor(newXp / 1000) + 1;
 
-      if (wantedData) setWanted(wantedData);
+      await supabase
+        .from('profiles')
+        .update({ xp: newXp, level: newLevel })
+        .eq('id', (await supabase.auth.getUser()).data.user?.id);
 
-      // Fetch badges
-      const { data: badgesData } = await supabase
-        .from("user_badges")
-        .select("*")
-        .eq("user_id", user.id)
-        .order("earned_at", { ascending: false });
-
-      if (badgesData) setBadges(badgesData);
-    } catch (error) {
-      console.error("Error loading dashboard data:", error);
-      toast.error("Failed to load trainer data");
-    } finally {
-      setLoading(false);
+      toast.success(`Challenge completed! +${rewardXp} XP`);
+      fetchUserData();
     }
   };
 
-  const getTrainerRank = (level: number) => {
-    if (level >= 50) return "PokéMaster";
-    if (level >= 30) return "Champion";
-    if (level >= 20) return "Gym Leader";
-    if (level >= 10) return "Ace Trainer";
-    return "Rookie Trainer";
+  const getChallengeLabel = (type: string) => {
+    const labels: Record<string, string> = {
+      catch_5_pokemon: 'Catch 5 Pokémon',
+      complete_quiz: 'Complete a Quiz',
+      guess_pokemon: 'Play Guess the Pokémon',
+      create_team: 'Create a New Team'
+    };
+    return labels[type] || type;
   };
 
-  const completionPercentage = (caughtPokemon.length / 1025) * 100;
-  const xpForNextLevel = (profile?.level || 1) * 100;
-  const xpProgress = ((profile?.xp || 0) / xpForNextLevel) * 100;
+  const xpToNextLevel = (stats.level * 1000) - stats.xp;
+  const xpProgress = (stats.xp % 1000) / 10;
 
-  if (authLoading || loading) {
-    return (
-      <div className="min-h-screen bg-background">
-        <Navigation />
-        <div className="container mx-auto px-4 pt-24 pb-16 flex justify-center items-center">
-          <div className="text-center">
-            <div className="w-16 h-16 border-4 border-primary border-t-transparent rounded-full animate-spin mx-auto mb-4" />
-            <p className="text-muted-foreground">Loading Trainer Data...</p>
-          </div>
-        </div>
-      </div>
-    );
-  }
+  if (loading) return <div className="min-h-screen bg-gradient-to-br from-primary/20 via-background to-secondary/20"><Navigation /><div className="flex items-center justify-center h-screen">Loading...</div></div>;
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gradient-to-br from-primary/20 via-background to-secondary/20">
       <Navigation />
+      <div className="container mx-auto px-4 py-8 pt-24">
+        <h1 className="text-4xl font-bold text-center mb-8">Trainer Dashboard</h1>
 
-      <div className="container mx-auto px-4 pt-24 pb-16">
-        <div className="max-w-6xl mx-auto">
-          {/* Header */}
-          <div className="mb-8">
-            <h1 className="text-4xl md:text-5xl font-heading mb-2">
-              <span className="gradient-text">Trainer Dashboard</span>
-            </h1>
-            <p className="text-lg text-muted-foreground">
-              Welcome back, {profile?.username || "Trainer"}!
-            </p>
-          </div>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+          <Card className="p-6 col-span-1">
+            <div className="text-center">
+              <Crown className="w-16 h-16 mx-auto mb-4 text-yellow-500" />
+              <h2 className="text-3xl font-bold">{stats.username}</h2>
+              <Badge className="mt-2">Level {stats.level}</Badge>
+              <div className="mt-4">
+                <p className="text-sm text-muted-foreground mb-2">XP Progress</p>
+                <Progress value={xpProgress} />
+                <p className="text-xs text-muted-foreground mt-1">{xpToNextLevel} XP to Level {stats.level + 1}</p>
+              </div>
+            </div>
+          </Card>
 
-          {/* Stats Overview */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
-            <Card className="border-2 bg-gradient-to-br from-primary/10 to-primary/5">
-              <CardContent className="p-6">
-                <div className="flex items-center justify-between mb-2">
-                  <Trophy className="h-8 w-8 text-primary" />
-                  <Badge className="bg-primary text-primary-foreground">
-                    Level {profile?.level || 1}
-                  </Badge>
-                </div>
-                <p className="text-2xl font-bold">{getTrainerRank(profile?.level || 1)}</p>
-                <Progress value={xpProgress} className="mt-2" />
-                <p className="text-xs text-muted-foreground mt-1">
-                  {profile?.xp || 0} / {xpForNextLevel} XP
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-2 bg-gradient-to-br from-secondary/10 to-secondary/5">
-              <CardContent className="p-6">
-                <div className="flex items-center justify-between mb-2">
-                  <Target className="h-8 w-8 text-secondary" />
-                </div>
-                <p className="text-2xl font-bold">{caughtPokemon.length}</p>
-                <p className="text-sm text-muted-foreground">Pokémon Caught</p>
-                <Progress value={completionPercentage} className="mt-2" />
-                <p className="text-xs text-muted-foreground mt-1">
-                  {completionPercentage.toFixed(1)}% Complete
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-2 bg-gradient-to-br from-accent/10 to-accent/5">
-              <CardContent className="p-6">
-                <div className="flex items-center justify-between mb-2">
-                  <Heart className="h-8 w-8 text-accent" />
-                </div>
-                <p className="text-2xl font-bold">{favorites.length}</p>
-                <p className="text-sm text-muted-foreground">Favorites</p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-2 bg-gradient-to-br from-purple-500/10 to-purple-500/5">
-              <CardContent className="p-6">
-                <div className="flex items-center justify-between mb-2">
-                  <Star className="h-8 w-8 text-purple-500" />
-                </div>
-                <p className="text-2xl font-bold">{badges.length}</p>
-                <p className="text-sm text-muted-foreground">Badges Earned</p>
-              </CardContent>
-            </Card>
-          </div>
-
-          {/* Tabs */}
-          <Tabs defaultValue="caught" className="w-full">
-            <TabsList className="grid w-full grid-cols-4 mb-6">
-              <TabsTrigger value="caught">Caught ({caughtPokemon.length})</TabsTrigger>
-              <TabsTrigger value="favorites">Favorites ({favorites.length})</TabsTrigger>
-              <TabsTrigger value="wanted">Wanted ({wanted.length})</TabsTrigger>
-              <TabsTrigger value="badges">Badges ({badges.length})</TabsTrigger>
-            </TabsList>
-
-            <TabsContent value="caught">
-              {caughtPokemon.length === 0 ? (
-                <Card className="border-2">
-                  <CardContent className="p-12 text-center">
-                    <Target className="h-16 w-16 mx-auto mb-4 text-muted-foreground" />
-                    <p className="text-xl font-heading mb-2">No Pokémon Caught Yet!</p>
-                    <p className="text-muted-foreground">
-                      Start exploring the Pokédex to catch your first Pokémon!
-                    </p>
-                  </CardContent>
-                </Card>
-              ) : (
-                <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
-                  {caughtPokemon.map((pokemon) => (
-                    <Card key={pokemon.id} className="hover-float cursor-pointer border-2">
-                      <CardContent className="p-4 text-center">
-                        <p className="text-xs text-muted-foreground mb-1">
-                          #{pokemon.pokemon_id.toString().padStart(3, "0")}
-                        </p>
-                        <p className="font-heading text-sm capitalize">{pokemon.pokemon_name}</p>
-                      </CardContent>
-                    </Card>
-                  ))}
-                </div>
-              )}
-            </TabsContent>
-
-            <TabsContent value="favorites">
-              {favorites.length === 0 ? (
-                <Card className="border-2">
-                  <CardContent className="p-12 text-center">
-                    <Heart className="h-16 w-16 mx-auto mb-4 text-muted-foreground" />
-                    <p className="text-xl font-heading mb-2">No Favorites Yet!</p>
-                    <p className="text-muted-foreground">
-                      Mark your favorite Pokémon to see them here!
-                    </p>
-                  </CardContent>
-                </Card>
-              ) : (
-                <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
-                  {favorites.map((pokemon) => (
-                    <Card key={pokemon.id} className="hover-float cursor-pointer border-2">
-                      <CardContent className="p-4 text-center">
-                        <p className="text-xs text-muted-foreground mb-1">
-                          #{pokemon.pokemon_id.toString().padStart(3, "0")}
-                        </p>
-                        <p className="font-heading text-sm capitalize">{pokemon.pokemon_name}</p>
-                      </CardContent>
-                    </Card>
-                  ))}
-                </div>
-              )}
-            </TabsContent>
-
-            <TabsContent value="wanted">
-              {wanted.length === 0 ? (
-                <Card className="border-2">
-                  <CardContent className="p-12 text-center">
-                    <Zap className="h-16 w-16 mx-auto mb-4 text-muted-foreground" />
-                    <p className="text-xl font-heading mb-2">No Wanted Pokémon!</p>
-                    <p className="text-muted-foreground">
-                      Add Pokémon to your wanted list to track your goals!
-                    </p>
-                  </CardContent>
-                </Card>
-              ) : (
-                <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
-                  {wanted.map((pokemon) => (
-                    <Card key={pokemon.id} className="hover-float cursor-pointer border-2">
-                      <CardContent className="p-4 text-center">
-                        <p className="text-xs text-muted-foreground mb-1">
-                          #{pokemon.pokemon_id.toString().padStart(3, "0")}
-                        </p>
-                        <p className="font-heading text-sm capitalize">{pokemon.pokemon_name}</p>
-                      </CardContent>
-                    </Card>
-                  ))}
-                </div>
-              )}
-            </TabsContent>
-
-            <TabsContent value="badges">
-              {badges.length === 0 ? (
-                <Card className="border-2">
-                  <CardContent className="p-12 text-center">
-                    <Trophy className="h-16 w-16 mx-auto mb-4 text-muted-foreground" />
-                    <p className="text-xl font-heading mb-2">No Badges Earned Yet!</p>
-                    <p className="text-muted-foreground">
-                      Complete challenges to earn badges!
-                    </p>
-                  </CardContent>
-                </Card>
-              ) : (
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                  {badges.map((badge) => (
-                    <Card key={badge.id} className="hover-float border-2">
-                      <CardContent className="p-6 text-center">
-                        <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
-                          <Trophy className="h-8 w-8 text-primary" />
-                        </div>
-                        <p className="font-heading text-sm mb-1">{badge.badge_name}</p>
-                        <Badge variant="secondary" className="text-xs capitalize">
-                          {badge.badge_type}
-                        </Badge>
-                      </CardContent>
-                    </Card>
-                  ))}
-                </div>
-              )}
-            </TabsContent>
-          </Tabs>
+          <Card className="p-6 col-span-2">
+            <h3 className="text-xl font-bold mb-4">Statistics</h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <div className="text-center">
+                <Star className="w-8 h-8 mx-auto mb-2 text-blue-500" />
+                <p className="text-2xl font-bold">{stats.caughtCount}</p>
+                <p className="text-sm text-muted-foreground">Caught</p>
+              </div>
+              <div className="text-center">
+                <Zap className="w-8 h-8 mx-auto mb-2 text-yellow-500" />
+                <p className="text-2xl font-bold">{stats.shinyCount}</p>
+                <p className="text-sm text-muted-foreground">Shiny</p>
+              </div>
+              <div className="text-center">
+                <Crown className="w-8 h-8 mx-auto mb-2 text-purple-500" />
+                <p className="text-2xl font-bold">{stats.legendaryCount}</p>
+                <p className="text-sm text-muted-foreground">Legendary</p>
+              </div>
+              <div className="text-center">
+                <Award className="w-8 h-8 mx-auto mb-2 text-green-500" />
+                <p className="text-2xl font-bold">{stats.badgeCount}</p>
+                <p className="text-sm text-muted-foreground">Badges</p>
+              </div>
+              <div className="text-center">
+                <Trophy className="w-8 h-8 mx-auto mb-2 text-orange-500" />
+                <p className="text-2xl font-bold">{stats.quizScore}</p>
+                <p className="text-sm text-muted-foreground">Best Quiz</p>
+              </div>
+              <div className="text-center">
+                <Target className="w-8 h-8 mx-auto mb-2 text-red-500" />
+                <p className="text-2xl font-bold">{stats.teamsCount}</p>
+                <p className="text-sm text-muted-foreground">Teams</p>
+              </div>
+            </div>
+          </Card>
         </div>
+
+        <Card className="p-6">
+          <h3 className="text-xl font-bold mb-4">Daily Challenges</h3>
+          <div className="space-y-3">
+            {challenges.map((challenge) => (
+              <div
+                key={challenge.id}
+                className={`flex items-center justify-between p-4 rounded-lg ${
+                  challenge.completed ? 'bg-green-500/10 border-2 border-green-500' : 'bg-muted'
+                }`}
+              >
+                <div className="flex items-center gap-3">
+                  <Target className="w-6 h-6" />
+                  <div>
+                    <p className="font-semibold">{getChallengeLabel(challenge.challenge_type)}</p>
+                    <p className="text-sm text-muted-foreground">Reward: {challenge.reward_xp} XP</p>
+                  </div>
+                </div>
+                {challenge.completed ? (
+                  <Badge className="bg-green-500">✓ Completed</Badge>
+                ) : (
+                  <Button onClick={() => completeChallenge(challenge.id, challenge.reward_xp)}>
+                    Mark Complete
+                  </Button>
+                )}
+              </div>
+            ))}
+          </div>
+        </Card>
       </div>
     </div>
   );
