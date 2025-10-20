@@ -1,0 +1,246 @@
+{
+  "version": "1.0.0",
+  "last_updated": "2025-01-20",
+  "characters": [
+    {
+      "character": "Ash Ketchum",
+      "slug": "ash_ketchum",
+      "region": "Kanto, Johto, Hoenn, Sinnoh, Unova, Kalos, Alola, Galar",
+      "role": "Protagonist",
+      "series": "Original Series - Journeys",
+      "images": [
+        {
+          "type": "official_portrait",
+          "filename": "ash_ketchum_official_pokemoncom.png",
+          "source": "PLACEHOLDER - Requires official Pokemon.com asset",
+          "resolution": "2048x2048",
+          "season": "original",
+          "region": "kanto",
+          "verified": false
+        }
+      ],
+      "team": [
+        { "pokemon_name": "Pikachu", "pokemon_id": 25, "is_signature": true },
+        { "pokemon_name": "Charizard", "pokemon_id": 6, "is_signature": true },
+        { "pokemon_name": "Greninja", "pokemon_id": 658, "is_signature": true },
+        { "pokemon_name": "Lucario", "pokemon_id": 448, "is_signature": true },
+        { "pokemon_name": "Infernape", "pokemon_id": 392, "is_signature": true },
+        { "pokemon_name": "Sceptile", "pokemon_id": 254, "is_signature": true }
+      ],
+      "canonical_image_source": "https://www.pokemon.com/us/pokemon-episodes/",
+      "notes": "Requires official artwork from Pokemon Company International. Original series outfit preferred."
+    },
+    {
+      "character": "Misty",
+      "slug": "misty",
+      "region": "Kanto, Johto",
+      "role": "Gym Leader",
+      "series": "Original Series",
+      "images": [
+        {
+          "type": "official_portrait",
+          "filename": "misty_official_bulbapedia.png",
+          "source": "PLACEHOLDER - Requires official Bulbapedia art section",
+          "resolution": "1024x1024",
+          "season": "original",
+          "region": "kanto",
+          "verified": false
+        }
+      ],
+      "team": [
+        { "pokemon_name": "Psyduck", "pokemon_id": 54, "is_signature": true },
+        { "pokemon_name": "Staryu", "pokemon_id": 120, "is_signature": true },
+        { "pokemon_name": "Starmie", "pokemon_id": 121, "is_signature": true },
+        { "pokemon_name": "Gyarados", "pokemon_id": 130, "is_signature": true },
+        { "pokemon_name": "Corsola", "pokemon_id": 222, "is_signature": false },
+        { "pokemon_name": "Azurill", "pokemon_id": 298, "is_signature": false }
+      ],
+      "canonical_image_source": "https://bulbapedia.bulbagarden.net/wiki/Misty",
+      "notes": "Cerulean City Gym Leader outfit. Official game/anime art required."
+    },
+    {
+      "character": "Brock",
+      "slug": "brock",
+      "region": "Kanto, Johto, Hoenn, Sinnoh",
+      "role": "Gym Leader / Pokémon Doctor",
+      "series": "Original Series - Diamond & Pearl",
+      "images": [
+        {
+          "type": "official_portrait",
+          "filename": "brock_official_serebii.png",
+          "source": "PLACEHOLDER - Requires official Serebii character art",
+          "resolution": "1024x1024",
+          "season": "original",
+          "region": "kanto",
+          "verified": false
+        }
+      ],
+      "team": [
+        { "pokemon_name": "Onix", "pokemon_id": 95, "is_signature": true },
+        { "pokemon_name": "Geodude", "pokemon_id": 74, "is_signature": true },
+        { "pokemon_name": "Crobat", "pokemon_id": 169, "is_signature": true },
+        { "pokemon_name": "Marshtomp", "pokemon_id": 259, "is_signature": false },
+        { "pokemon_name": "Sudowoodo", "pokemon_id": 185, "is_signature": false },
+        { "pokemon_name": "Croagunk", "pokemon_id": 453, "is_signature": true }
+      ],
+      "canonical_image_source": "https://www.serebii.net/anime/characters/",
+      "notes": "Pewter City Gym Leader outfit preferred. Official promotional art only."
+    },
+    {
+      "character": "Serena",
+      "slug": "serena",
+      "region": "Kalos",
+      "role": "Performer",
+      "series": "XY",
+      "images": [
+        {
+          "type": "official_portrait",
+          "filename": "serena_official_xy.png",
+          "source": "PLACEHOLDER - Requires official XY series promotional art",
+          "resolution": "2048x2048",
+          "season": "xy",
+          "region": "kalos",
+          "verified": false
+        }
+      ],
+      "team": [
+        { "pokemon_name": "Braixen", "pokemon_id": 654, "is_signature": true },
+        { "pokemon_name": "Pancham", "pokemon_id": 674, "is_signature": true },
+        { "pokemon_name": "Sylveon", "pokemon_id": 700, "is_signature": true },
+        { "pokemon_name": "Delphox", "pokemon_id": 655, "is_signature": true }
+      ],
+      "canonical_image_source": "https://www.pokemon.com/us/animation/pokemon-xy/",
+      "notes": "XY series performer outfit. Multiple outfit variations available."
+    },
+    {
+      "character": "Dawn",
+      "slug": "dawn",
+      "region": "Sinnoh",
+      "role": "Coordinator",
+      "series": "Diamond & Pearl",
+      "images": [
+        {
+          "type": "official_portrait",
+          "filename": "dawn_official_dp.png",
+          "source": "PLACEHOLDER - Requires official Diamond & Pearl series art",
+          "resolution": "1024x1024",
+          "season": "diamond_pearl",
+          "region": "sinnoh",
+          "verified": false
+        }
+      ],
+      "team": [
+        { "pokemon_name": "Piplup", "pokemon_id": 393, "is_signature": true },
+        { "pokemon_name": "Buneary", "pokemon_id": 427, "is_signature": true },
+        { "pokemon_name": "Pachirisu", "pokemon_id": 417, "is_signature": true },
+        { "pokemon_name": "Mamoswine", "pokemon_id": 473, "is_signature": true },
+        { "pokemon_name": "Quilava", "pokemon_id": 156, "is_signature": false },
+        { "pokemon_name": "Togekiss", "pokemon_id": 468, "is_signature": true }
+      ],
+      "canonical_image_source": "https://bulbapedia.bulbagarden.net/wiki/Dawn",
+      "notes": "Coordinator outfit from Diamond & Pearl series required."
+    },
+    {
+      "character": "Goh",
+      "slug": "goh",
+      "region": "Kanto, Various",
+      "role": "Pokémon Researcher",
+      "series": "Journeys",
+      "images": [
+        {
+          "type": "official_portrait",
+          "filename": "goh_official_journeys.png",
+          "source": "PLACEHOLDER - Requires official Journeys series art",
+          "resolution": "2048x2048",
+          "season": "journeys",
+          "region": "kanto",
+          "verified": false
+        }
+      ],
+      "team": [
+        { "pokemon_name": "Cinderace", "pokemon_id": 815, "is_signature": true },
+        { "pokemon_name": "Inteleon", "pokemon_id": 818, "is_signature": true },
+        { "pokemon_name": "Grookey", "pokemon_id": 810, "is_signature": false },
+        { "pokemon_name": "Suicune", "pokemon_id": 245, "is_signature": true },
+        { "pokemon_name": "Eternatus", "pokemon_id": 890, "is_signature": true }
+      ],
+      "canonical_image_source": "https://www.pokemon.com/us/animation/pokemon-journeys-the-series/",
+      "notes": "Journeys series official art. Researcher outfit variant."
+    },
+    {
+      "character": "Cynthia",
+      "slug": "cynthia",
+      "region": "Sinnoh",
+      "role": "Champion",
+      "series": "Diamond & Pearl, Journeys",
+      "images": [
+        {
+          "type": "game_art",
+          "filename": "cynthia_official_game.png",
+          "source": "PLACEHOLDER - Requires official game box art or promotional material",
+          "resolution": "2048x2048",
+          "region": "sinnoh",
+          "verified": false
+        }
+      ],
+      "team": [
+        { "pokemon_name": "Garchomp", "pokemon_id": 445, "is_signature": true },
+        { "pokemon_name": "Lucario", "pokemon_id": 448, "is_signature": true },
+        { "pokemon_name": "Spiritomb", "pokemon_id": 442, "is_signature": true },
+        { "pokemon_name": "Milotic", "pokemon_id": 350, "is_signature": true },
+        { "pokemon_name": "Togekiss", "pokemon_id": 468, "is_signature": true },
+        { "pokemon_name": "Roserade", "pokemon_id": 407, "is_signature": true }
+      ],
+      "canonical_image_source": "https://www.pokemon.com/us/pokemon-video-games/pokemon-brilliant-diamond-and-pokemon-shining-pearl/",
+      "notes": "Sinnoh Champion. Use official game art from Diamond/Pearl/Platinum or BDSP."
+    },
+    {
+      "character": "Leon",
+      "slug": "leon",
+      "region": "Galar",
+      "role": "Champion",
+      "series": "Journeys",
+      "images": [
+        {
+          "type": "game_art",
+          "filename": "leon_official_swsh.png",
+          "source": "PLACEHOLDER - Requires official Sword/Shield game art",
+          "resolution": "2048x2048",
+          "region": "galar",
+          "verified": false
+        }
+      ],
+      "team": [
+        { "pokemon_name": "Charizard", "pokemon_id": 6, "is_signature": true },
+        { "pokemon_name": "Dragapult", "pokemon_id": 887, "is_signature": true },
+        { "pokemon_name": "Rillaboom", "pokemon_id": 812, "is_signature": true },
+        { "pokemon_name": "Cinderace", "pokemon_id": 815, "is_signature": true },
+        { "pokemon_name": "Inteleon", "pokemon_id": 818, "is_signature": true },
+        { "pokemon_name": "Mr. Rime", "pokemon_id": 866, "is_signature": true }
+      ],
+      "canonical_image_source": "https://www.pokemon.com/us/pokemon-video-games/pokemon-sword-and-pokemon-shield/",
+      "notes": "Galar Champion. Official Sword/Shield promotional art required."
+    }
+  ],
+  "qa_report": {
+    "missing_canonical_art": [
+      "Ash Ketchum",
+      "Misty",
+      "Brock",
+      "Serena",
+      "Dawn",
+      "Goh",
+      "Cynthia",
+      "Leon",
+      "May",
+      "Clemont",
+      "Iris",
+      "Cilan",
+      "Chloe"
+    ],
+    "low_confidence_images": [],
+    "pending_verification": [
+      "All character images require official source verification and replacement"
+    ]
+  }
+}
