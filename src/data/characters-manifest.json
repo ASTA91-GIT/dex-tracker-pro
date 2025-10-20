@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "2.0.0",
   "last_updated": "2025-01-20",
   "characters": [
     {
@@ -11,10 +11,10 @@
       "images": [
         {
           "type": "official_portrait",
-          "filename": "ash_ketchum_official_pokemoncom.png",
-          "source": "PLACEHOLDER - Requires official Pokemon.com asset",
+          "filename": "ash_ketchum_official_journeys.png",
+          "source": "https://bulbapedia.bulbagarden.net/wiki/Ash_Ketchum",
           "resolution": "2048x2048",
-          "season": "original",
+          "season": "journeys",
           "region": "kanto",
           "verified": false
         }
@@ -27,8 +27,8 @@
         { "pokemon_name": "Infernape", "pokemon_id": 392, "is_signature": true },
         { "pokemon_name": "Sceptile", "pokemon_id": 254, "is_signature": true }
       ],
-      "canonical_image_source": "https://www.pokemon.com/us/pokemon-episodes/",
-      "notes": "Requires official artwork from Pokemon Company International. Original series outfit preferred."
+      "canonical_image_source": "https://archives.bulbagarden.net/wiki/Category:Ash_Ketchum",
+      "notes": "World Champion. Requires copyright license for official artwork."
     },
     {
       "character": "Misty",
@@ -39,8 +39,8 @@
       "images": [
         {
           "type": "official_portrait",
-          "filename": "misty_official_bulbapedia.png",
-          "source": "PLACEHOLDER - Requires official Bulbapedia art section",
+          "filename": "misty_official_original.png",
+          "source": "https://bulbapedia.bulbagarden.net/wiki/Misty_(anime)",
           "resolution": "1024x1024",
           "season": "original",
           "region": "kanto",
@@ -56,7 +56,7 @@
         { "pokemon_name": "Azurill", "pokemon_id": 298, "is_signature": false }
       ],
       "canonical_image_source": "https://bulbapedia.bulbagarden.net/wiki/Misty",
-      "notes": "Cerulean City Gym Leader outfit. Official game/anime art required."
+      "notes": "Cerulean Gym Leader. Water-type specialist."
     },
     {
       "character": "Brock",
@@ -67,8 +67,8 @@
       "images": [
         {
           "type": "official_portrait",
-          "filename": "brock_official_serebii.png",
-          "source": "PLACEHOLDER - Requires official Serebii character art",
+          "filename": "brock_official_original.png",
+          "source": "https://www.serebii.net/anime/characters/brock.shtml",
           "resolution": "1024x1024",
           "season": "original",
           "region": "kanto",
@@ -83,34 +83,35 @@
         { "pokemon_name": "Sudowoodo", "pokemon_id": 185, "is_signature": false },
         { "pokemon_name": "Croagunk", "pokemon_id": 453, "is_signature": true }
       ],
-      "canonical_image_source": "https://www.serebii.net/anime/characters/",
-      "notes": "Pewter City Gym Leader outfit preferred. Official promotional art only."
+      "canonical_image_source": "https://www.serebii.net/anime/characters/brock.shtml",
+      "notes": "Pewter Gym Leader. Rock-type specialist and Pokémon breeder."
     },
     {
-      "character": "Serena",
-      "slug": "serena",
-      "region": "Kalos",
-      "role": "Performer",
-      "series": "XY",
+      "character": "May",
+      "slug": "may",
+      "region": "Hoenn, Kanto",
+      "role": "Coordinator",
+      "series": "Advanced Generation",
       "images": [
         {
           "type": "official_portrait",
-          "filename": "serena_official_xy.png",
-          "source": "PLACEHOLDER - Requires official XY series promotional art",
-          "resolution": "2048x2048",
-          "season": "xy",
-          "region": "kalos",
+          "filename": "may_official_ag.png",
+          "source": "https://bulbapedia.bulbagarden.net/wiki/May_(anime)",
+          "resolution": "1024x1024",
+          "season": "advanced",
+          "region": "hoenn",
           "verified": false
         }
       ],
       "team": [
-        { "pokemon_name": "Braixen", "pokemon_id": 654, "is_signature": true },
-        { "pokemon_name": "Pancham", "pokemon_id": 674, "is_signature": true },
-        { "pokemon_name": "Sylveon", "pokemon_id": 700, "is_signature": true },
-        { "pokemon_name": "Delphox", "pokemon_id": 655, "is_signature": true }
+        { "pokemon_name": "Blaziken", "pokemon_id": 257, "is_signature": true },
+        { "pokemon_name": "Beautifly", "pokemon_id": 267, "is_signature": true },
+        { "pokemon_name": "Glaceon", "pokemon_id": 471, "is_signature": true },
+        { "pokemon_name": "Munchlax", "pokemon_id": 446, "is_signature": true },
+        { "pokemon_name": "Venusaur", "pokemon_id": 3, "is_signature": true }
       ],
-      "canonical_image_source": "https://www.pokemon.com/us/animation/pokemon-xy/",
-      "notes": "XY series performer outfit. Multiple outfit variations available."
+      "canonical_image_source": "https://bulbapedia.bulbagarden.net/wiki/May_(anime)",
+      "notes": "Hoenn Coordinator. Daughter of Norman, Petalburg Gym Leader."
     },
     {
       "character": "Dawn",
@@ -122,7 +123,7 @@
         {
           "type": "official_portrait",
           "filename": "dawn_official_dp.png",
-          "source": "PLACEHOLDER - Requires official Diamond & Pearl series art",
+          "source": "https://bulbapedia.bulbagarden.net/wiki/Dawn_(anime)",
           "resolution": "1024x1024",
           "season": "diamond_pearl",
           "region": "sinnoh",
@@ -137,8 +138,158 @@
         { "pokemon_name": "Quilava", "pokemon_id": 156, "is_signature": false },
         { "pokemon_name": "Togekiss", "pokemon_id": 468, "is_signature": true }
       ],
-      "canonical_image_source": "https://bulbapedia.bulbagarden.net/wiki/Dawn",
-      "notes": "Coordinator outfit from Diamond & Pearl series required."
+      "canonical_image_source": "https://bulbapedia.bulbagarden.net/wiki/Dawn_(anime)",
+      "notes": "Sinnoh Coordinator. Daughter of Johanna."
+    },
+    {
+      "character": "Serena",
+      "slug": "serena",
+      "region": "Kalos",
+      "role": "Performer",
+      "series": "XY",
+      "images": [
+        {
+          "type": "official_portrait",
+          "filename": "serena_official_xy.png",
+          "source": "https://bulbapedia.bulbagarden.net/wiki/Serena_(anime)",
+          "resolution": "2048x2048",
+          "season": "xy",
+          "region": "kalos",
+          "verified": false
+        }
+      ],
+      "team": [
+        { "pokemon_name": "Braixen", "pokemon_id": 654, "is_signature": true },
+        { "pokemon_name": "Pancham", "pokemon_id": 674, "is_signature": true },
+        { "pokemon_name": "Sylveon", "pokemon_id": 700, "is_signature": true },
+        { "pokemon_name": "Delphox", "pokemon_id": 655, "is_signature": true }
+      ],
+      "canonical_image_source": "https://bulbapedia.bulbagarden.net/wiki/Serena_(anime)",
+      "notes": "Kalos Performer. Childhood friend of Ash."
+    },
+    {
+      "character": "Iris",
+      "slug": "iris",
+      "region": "Unova",
+      "role": "Champion / Dragon Master",
+      "series": "Best Wishes",
+      "images": [
+        {
+          "type": "official_portrait",
+          "filename": "iris_official_bw.png",
+          "source": "https://bulbapedia.bulbagarden.net/wiki/Iris",
+          "resolution": "1024x1024",
+          "season": "best_wishes",
+          "region": "unova",
+          "verified": false
+        }
+      ],
+      "team": [
+        { "pokemon_name": "Dragonite", "pokemon_id": 149, "is_signature": true },
+        { "pokemon_name": "Excadrill", "pokemon_id": 530, "is_signature": true },
+        { "pokemon_name": "Haxorus", "pokemon_id": 612, "is_signature": true },
+        { "pokemon_name": "Emolga", "pokemon_id": 587, "is_signature": true }
+      ],
+      "canonical_image_source": "https://bulbapedia.bulbagarden.net/wiki/Iris",
+      "notes": "Unova Champion. Dragon-type specialist."
+    },
+    {
+      "character": "Cilan",
+      "slug": "cilan",
+      "region": "Unova",
+      "role": "Gym Leader / Connoisseur",
+      "series": "Best Wishes",
+      "images": [
+        {
+          "type": "official_portrait",
+          "filename": "cilan_official_bw.png",
+          "source": "https://bulbapedia.bulbagarden.net/wiki/Cilan",
+          "resolution": "1024x1024",
+          "season": "best_wishes",
+          "region": "unova",
+          "verified": false
+        }
+      ],
+      "team": [
+        { "pokemon_name": "Pansage", "pokemon_id": 511, "is_signature": true },
+        { "pokemon_name": "Crustle", "pokemon_id": 558, "is_signature": true },
+        { "pokemon_name": "Stunfisk", "pokemon_id": 618, "is_signature": true }
+      ],
+      "canonical_image_source": "https://bulbapedia.bulbagarden.net/wiki/Cilan",
+      "notes": "Striaton Gym Leader. Grass-type specialist and Pokémon Connoisseur."
+    },
+    {
+      "character": "Clemont",
+      "slug": "clemont",
+      "region": "Kalos",
+      "role": "Gym Leader / Inventor",
+      "series": "XY",
+      "images": [
+        {
+          "type": "official_portrait",
+          "filename": "clemont_official_xy.png",
+          "source": "https://bulbapedia.bulbagarden.net/wiki/Clemont",
+          "resolution": "1024x1024",
+          "season": "xy",
+          "region": "kalos",
+          "verified": false
+        }
+      ],
+      "team": [
+        { "pokemon_name": "Luxray", "pokemon_id": 405, "is_signature": true },
+        { "pokemon_name": "Bunnelby", "pokemon_id": 659, "is_signature": true },
+        { "pokemon_name": "Chespin", "pokemon_id": 650, "is_signature": true },
+        { "pokemon_name": "Heliolisk", "pokemon_id": 695, "is_signature": true }
+      ],
+      "canonical_image_source": "https://bulbapedia.bulbagarden.net/wiki/Clemont",
+      "notes": "Lumiose Gym Leader. Electric-type specialist and inventor."
+    },
+    {
+      "character": "Bonnie",
+      "slug": "bonnie",
+      "region": "Kalos",
+      "role": "Companion",
+      "series": "XY",
+      "images": [
+        {
+          "type": "official_portrait",
+          "filename": "bonnie_official_xy.png",
+          "source": "https://bulbapedia.bulbagarden.net/wiki/Bonnie",
+          "resolution": "1024x1024",
+          "season": "xy",
+          "region": "kalos",
+          "verified": false
+        }
+      ],
+      "team": [
+        { "pokemon_name": "Dedenne", "pokemon_id": 702, "is_signature": true }
+      ],
+      "canonical_image_source": "https://bulbapedia.bulbagarden.net/wiki/Bonnie",
+      "notes": "Clemont's younger sister. Too young to be a trainer."
+    },
+    {
+      "character": "Lillie",
+      "slug": "lillie",
+      "region": "Alola",
+      "role": "Student / Researcher",
+      "series": "Sun & Moon",
+      "images": [
+        {
+          "type": "official_portrait",
+          "filename": "lillie_official_sm.png",
+          "source": "https://bulbapedia.bulbagarden.net/wiki/Lillie",
+          "resolution": "2048x2048",
+          "season": "sun_moon",
+          "region": "alola",
+          "verified": false
+        }
+      ],
+      "team": [
+        { "pokemon_name": "Alolan Vulpix", "pokemon_id": 37, "is_signature": true },
+        { "pokemon_name": "Clefairy", "pokemon_id": 35, "is_signature": true }
+      ],
+      "canonical_image_source": "https://bulbapedia.bulbagarden.net/wiki/Lillie",
+      "notes": "Pokémon School student. Daughter of Lusamine."
     },
     {
       "character": "Goh",
@@ -150,7 +301,7 @@
         {
           "type": "official_portrait",
           "filename": "goh_official_journeys.png",
-          "source": "PLACEHOLDER - Requires official Journeys series art",
+          "source": "https://bulbapedia.bulbagarden.net/wiki/Goh",
           "resolution": "2048x2048",
           "season": "journeys",
           "region": "kanto",
@@ -161,38 +312,34 @@
         { "pokemon_name": "Cinderace", "pokemon_id": 815, "is_signature": true },
         { "pokemon_name": "Inteleon", "pokemon_id": 818, "is_signature": true },
         { "pokemon_name": "Grookey", "pokemon_id": 810, "is_signature": false },
-        { "pokemon_name": "Suicune", "pokemon_id": 245, "is_signature": true },
-        { "pokemon_name": "Eternatus", "pokemon_id": 890, "is_signature": true }
+        { "pokemon_name": "Suicune", "pokemon_id": 245, "is_signature": true }
       ],
-      "canonical_image_source": "https://www.pokemon.com/us/animation/pokemon-journeys-the-series/",
-      "notes": "Journeys series official art. Researcher outfit variant."
+      "canonical_image_source": "https://bulbapedia.bulbagarden.net/wiki/Goh",
+      "notes": "Project Mew researcher. Goal is to catch Mew."
     },
     {
-      "character": "Cynthia",
-      "slug": "cynthia",
-      "region": "Sinnoh",
-      "role": "Champion",
-      "series": "Diamond & Pearl, Journeys",
+      "character": "Chloe",
+      "slug": "chloe",
+      "region": "Kanto",
+      "role": "Student",
+      "series": "Journeys",
       "images": [
         {
-          "type": "game_art",
-          "filename": "cynthia_official_game.png",
-          "source": "PLACEHOLDER - Requires official game box art or promotional material",
-          "resolution": "2048x2048",
-          "region": "sinnoh",
+          "type": "official_portrait",
+          "filename": "chloe_official_journeys.png",
+          "source": "https://bulbapedia.bulbagarden.net/wiki/Chloe",
+          "resolution": "1024x1024",
+          "season": "journeys",
+          "region": "kanto",
           "verified": false
         }
       ],
       "team": [
-        { "pokemon_name": "Garchomp", "pokemon_id": 445, "is_signature": true },
-        { "pokemon_name": "Lucario", "pokemon_id": 448, "is_signature": true },
-        { "pokemon_name": "Spiritomb", "pokemon_id": 442, "is_signature": true },
-        { "pokemon_name": "Milotic", "pokemon_id": 350, "is_signature": true },
-        { "pokemon_name": "Togekiss", "pokemon_id": 468, "is_signature": true },
-        { "pokemon_name": "Roserade", "pokemon_id": 407, "is_signature": true }
+        { "pokemon_name": "Eevee", "pokemon_id": 133, "is_signature": true },
+        { "pokemon_name": "Yamper", "pokemon_id": 835, "is_signature": true }
       ],
-      "canonical_image_source": "https://www.pokemon.com/us/pokemon-video-games/pokemon-brilliant-diamond-and-pokemon-shining-pearl/",
-      "notes": "Sinnoh Champion. Use official game art from Diamond/Pearl/Platinum or BDSP."
+      "canonical_image_source": "https://bulbapedia.bulbagarden.net/wiki/Chloe",
+      "notes": "Daughter of Professor Cerise. Studies Eevee's evolution potential."
     },
     {
       "character": "Leon",
@@ -204,7 +351,7 @@
         {
           "type": "game_art",
           "filename": "leon_official_swsh.png",
-          "source": "PLACEHOLDER - Requires official Sword/Shield game art",
+          "source": "https://swordshield.pokemon.com/en-us/people-galar-region/champion-leon/",
           "resolution": "2048x2048",
           "region": "galar",
           "verified": false
@@ -218,8 +365,378 @@
         { "pokemon_name": "Inteleon", "pokemon_id": 818, "is_signature": true },
         { "pokemon_name": "Mr. Rime", "pokemon_id": 866, "is_signature": true }
       ],
-      "canonical_image_source": "https://www.pokemon.com/us/pokemon-video-games/pokemon-sword-and-pokemon-shield/",
-      "notes": "Galar Champion. Official Sword/Shield promotional art required."
+      "canonical_image_source": "https://swordshield.pokemon.com/en-us/people-galar-region/champion-leon/",
+      "notes": "Galar Champion. Undefeated until battling Ash."
+    },
+    {
+      "character": "Cynthia",
+      "slug": "cynthia",
+      "region": "Sinnoh",
+      "role": "Champion",
+      "series": "Diamond & Pearl, Journeys",
+      "images": [
+        {
+          "type": "game_art",
+          "filename": "cynthia_official_dppt.png",
+          "source": "https://bulbapedia.bulbagarden.net/wiki/Cynthia",
+          "resolution": "2048x2048",
+          "region": "sinnoh",
+          "verified": false
+        }
+      ],
+      "team": [
+        { "pokemon_name": "Garchomp", "pokemon_id": 445, "is_signature": true },
+        { "pokemon_name": "Lucario", "pokemon_id": 448, "is_signature": true },
+        { "pokemon_name": "Spiritomb", "pokemon_id": 442, "is_signature": true },
+        { "pokemon_name": "Milotic", "pokemon_id": 350, "is_signature": true },
+        { "pokemon_name": "Togekiss", "pokemon_id": 468, "is_signature": true },
+        { "pokemon_name": "Roserade", "pokemon_id": 407, "is_signature": true }
+      ],
+      "canonical_image_source": "https://bulbapedia.bulbagarden.net/wiki/Cynthia",
+      "notes": "Sinnoh Champion. Archaeologist and mythology researcher."
+    },
+    {
+      "character": "Professor Oak",
+      "slug": "professor_oak",
+      "region": "Kanto",
+      "role": "Professor",
+      "series": "Original Series - Journeys",
+      "images": [
+        {
+          "type": "official_portrait",
+          "filename": "oak_official_original.png",
+          "source": "https://bulbapedia.bulbagarden.net/wiki/Professor_Oak",
+          "resolution": "1024x1024",
+          "region": "kanto",
+          "verified": false
+        }
+      ],
+      "team": [],
+      "canonical_image_source": "https://bulbapedia.bulbagarden.net/wiki/Professor_Oak",
+      "notes": "Kanto region Pokémon Professor. Specializes in Pokémon-human relationships."
+    },
+    {
+      "character": "Professor Elm",
+      "slug": "professor_elm",
+      "region": "Johto",
+      "role": "Professor",
+      "series": "Original Series",
+      "images": [
+        {
+          "type": "official_portrait",
+          "filename": "elm_official_johto.png",
+          "source": "https://bulbapedia.bulbagarden.net/wiki/Professor_Elm",
+          "resolution": "1024x1024",
+          "region": "johto",
+          "verified": false
+        }
+      ],
+      "team": [],
+      "canonical_image_source": "https://bulbapedia.bulbagarden.net/wiki/Professor_Elm",
+      "notes": "Johto region Professor. Specializes in Pokémon breeding and evolution."
+    },
+    {
+      "character": "Professor Birch",
+      "slug": "professor_birch",
+      "region": "Hoenn",
+      "role": "Professor",
+      "series": "Advanced Generation",
+      "images": [
+        {
+          "type": "official_portrait",
+          "filename": "birch_official_hoenn.png",
+          "source": "https://bulbapedia.bulbagarden.net/wiki/Professor_Birch",
+          "resolution": "1024x1024",
+          "region": "hoenn",
+          "verified": false
+        }
+      ],
+      "team": [],
+      "canonical_image_source": "https://bulbapedia.bulbagarden.net/wiki/Professor_Birch",
+      "notes": "Hoenn region Professor. Specializes in Pokémon habitats."
+    },
+    {
+      "character": "Professor Rowan",
+      "slug": "professor_rowan",
+      "region": "Sinnoh",
+      "role": "Professor",
+      "series": "Diamond & Pearl",
+      "images": [
+        {
+          "type": "official_portrait",
+          "filename": "rowan_official_sinnoh.png",
+          "source": "https://bulbapedia.bulbagarden.net/wiki/Professor_Rowan",
+          "resolution": "1024x1024",
+          "region": "sinnoh",
+          "verified": false
+        }
+      ],
+      "team": [],
+      "canonical_image_source": "https://bulbapedia.bulbagarden.net/wiki/Professor_Rowan",
+      "notes": "Sinnoh region Professor. Specializes in Pokémon evolution."
+    },
+    {
+      "character": "Professor Juniper",
+      "slug": "professor_juniper",
+      "region": "Unova",
+      "role": "Professor",
+      "series": "Best Wishes",
+      "images": [
+        {
+          "type": "official_portrait",
+          "filename": "juniper_official_unova.png",
+          "source": "https://bulbapedia.bulbagarden.net/wiki/Professor_Juniper",
+          "resolution": "1024x1024",
+          "region": "unova",
+          "verified": false
+        }
+      ],
+      "team": [],
+      "canonical_image_source": "https://bulbapedia.bulbagarden.net/wiki/Professor_Juniper",
+      "notes": "Unova region Professor. Specializes in Pokémon origins."
+    },
+    {
+      "character": "Professor Sycamore",
+      "slug": "professor_sycamore",
+      "region": "Kalos",
+      "role": "Professor",
+      "series": "XY",
+      "images": [
+        {
+          "type": "official_portrait",
+          "filename": "sycamore_official_kalos.png",
+          "source": "https://bulbapedia.bulbagarden.net/wiki/Professor_Sycamore",
+          "resolution": "1024x1024",
+          "region": "kalos",
+          "verified": false
+        }
+      ],
+      "team": [
+        { "pokemon_name": "Garchomp", "pokemon_id": 445, "is_signature": true }
+      ],
+      "canonical_image_source": "https://bulbapedia.bulbagarden.net/wiki/Professor_Sycamore",
+      "notes": "Kalos region Professor. Specializes in Mega Evolution."
+    },
+    {
+      "character": "Professor Kukui",
+      "slug": "professor_kukui",
+      "region": "Alola",
+      "role": "Professor / Masked Royal",
+      "series": "Sun & Moon",
+      "images": [
+        {
+          "type": "official_portrait",
+          "filename": "kukui_official_alola.png",
+          "source": "https://bulbapedia.bulbagarden.net/wiki/Professor_Kukui",
+          "resolution": "1024x1024",
+          "region": "alola",
+          "verified": false
+        }
+      ],
+      "team": [
+        { "pokemon_name": "Incineroar", "pokemon_id": 727, "is_signature": true },
+        { "pokemon_name": "Lycanroc", "pokemon_id": 745, "is_signature": true },
+        { "pokemon_name": "Braviary", "pokemon_id": 628, "is_signature": true }
+      ],
+      "canonical_image_source": "https://bulbapedia.bulbagarden.net/wiki/Professor_Kukui",
+      "notes": "Alola region Professor. Specializes in Pokémon moves and wrestling."
+    },
+    {
+      "character": "Professor Magnolia",
+      "slug": "professor_magnolia",
+      "region": "Galar",
+      "role": "Professor",
+      "series": "Journeys",
+      "images": [
+        {
+          "type": "official_portrait",
+          "filename": "magnolia_official_galar.png",
+          "source": "https://bulbapedia.bulbagarden.net/wiki/Professor_Magnolia",
+          "resolution": "1024x1024",
+          "region": "galar",
+          "verified": false
+        }
+      ],
+      "team": [],
+      "canonical_image_source": "https://bulbapedia.bulbagarden.net/wiki/Professor_Magnolia",
+      "notes": "Galar region Professor. Specializes in Dynamax phenomenon."
+    },
+    {
+      "character": "Lt. Surge",
+      "slug": "lt_surge",
+      "region": "Kanto",
+      "role": "Gym Leader",
+      "series": "Original Series",
+      "images": [
+        {
+          "type": "official_portrait",
+          "filename": "surge_official_kanto.png",
+          "source": "https://bulbapedia.bulbagarden.net/wiki/Lt._Surge",
+          "resolution": "1024x1024",
+          "region": "kanto",
+          "verified": false
+        }
+      ],
+      "team": [
+        { "pokemon_name": "Raichu", "pokemon_id": 26, "is_signature": true },
+        { "pokemon_name": "Electrode", "pokemon_id": 101, "is_signature": true },
+        { "pokemon_name": "Magneton", "pokemon_id": 82, "is_signature": true }
+      ],
+      "canonical_image_source": "https://bulbapedia.bulbagarden.net/wiki/Lt._Surge",
+      "notes": "Vermilion Gym Leader. Electric-type specialist."
+    },
+    {
+      "character": "Erika",
+      "slug": "erika",
+      "region": "Kanto",
+      "role": "Gym Leader",
+      "series": "Original Series",
+      "images": [
+        {
+          "type": "official_portrait",
+          "filename": "erika_official_kanto.png",
+          "source": "https://bulbapedia.bulbagarden.net/wiki/Erika",
+          "resolution": "1024x1024",
+          "region": "kanto",
+          "verified": false
+        }
+      ],
+      "team": [
+        { "pokemon_name": "Vileplume", "pokemon_id": 45, "is_signature": true },
+        { "pokemon_name": "Tangela", "pokemon_id": 114, "is_signature": true },
+        { "pokemon_name": "Victreebel", "pokemon_id": 71, "is_signature": true }
+      ],
+      "canonical_image_source": "https://bulbapedia.bulbagarden.net/wiki/Erika",
+      "notes": "Celadon Gym Leader. Grass-type specialist."
+    },
+    {
+      "character": "Sabrina",
+      "slug": "sabrina",
+      "region": "Kanto",
+      "role": "Gym Leader",
+      "series": "Original Series",
+      "images": [
+        {
+          "type": "official_portrait",
+          "filename": "sabrina_official_kanto.png",
+          "source": "https://bulbapedia.bulbagarden.net/wiki/Sabrina",
+          "resolution": "1024x1024",
+          "region": "kanto",
+          "verified": false
+        }
+      ],
+      "team": [
+        { "pokemon_name": "Alakazam", "pokemon_id": 65, "is_signature": true },
+        { "pokemon_name": "Mr. Mime", "pokemon_id": 122, "is_signature": true },
+        { "pokemon_name": "Espeon", "pokemon_id": 196, "is_signature": true }
+      ],
+      "canonical_image_source": "https://bulbapedia.bulbagarden.net/wiki/Sabrina",
+      "notes": "Saffron Gym Leader. Psychic-type specialist with powerful psychic abilities."
+    },
+    {
+      "character": "Blaine",
+      "slug": "blaine",
+      "region": "Kanto",
+      "role": "Gym Leader",
+      "series": "Original Series",
+      "images": [
+        {
+          "type": "official_portrait",
+          "filename": "blaine_official_kanto.png",
+          "source": "https://bulbapedia.bulbagarden.net/wiki/Blaine",
+          "resolution": "1024x1024",
+          "region": "kanto",
+          "verified": false
+        }
+      ],
+      "team": [
+        { "pokemon_name": "Magmar", "pokemon_id": 126, "is_signature": true },
+        { "pokemon_name": "Arcanine", "pokemon_id": 59, "is_signature": true },
+        { "pokemon_name": "Rhydon", "pokemon_id": 112, "is_signature": true }
+      ],
+      "canonical_image_source": "https://bulbapedia.bulbagarden.net/wiki/Blaine",
+      "notes": "Cinnabar Gym Leader. Fire-type specialist and riddle master."
+    },
+    {
+      "character": "Steven Stone",
+      "slug": "steven_stone",
+      "region": "Hoenn",
+      "role": "Champion",
+      "series": "Advanced Generation",
+      "images": [
+        {
+          "type": "game_art",
+          "filename": "steven_official_hoenn.png",
+          "source": "https://bulbapedia.bulbagarden.net/wiki/Steven_Stone",
+          "resolution": "2048x2048",
+          "region": "hoenn",
+          "verified": false
+        }
+      ],
+      "team": [
+        { "pokemon_name": "Metagross", "pokemon_id": 376, "is_signature": true },
+        { "pokemon_name": "Skarmory", "pokemon_id": 227, "is_signature": true },
+        { "pokemon_name": "Aggron", "pokemon_id": 306, "is_signature": true },
+        { "pokemon_name": "Armaldo", "pokemon_id": 348, "is_signature": true },
+        { "pokemon_name": "Cradily", "pokemon_id": 346, "is_signature": true },
+        { "pokemon_name": "Claydol", "pokemon_id": 344, "is_signature": true }
+      ],
+      "canonical_image_source": "https://bulbapedia.bulbagarden.net/wiki/Steven_Stone",
+      "notes": "Hoenn Champion. Steel-type specialist and rare stone collector."
+    },
+    {
+      "character": "Red",
+      "slug": "red",
+      "region": "Kanto, Johto",
+      "role": "Champion",
+      "series": "Origins, Generations",
+      "images": [
+        {
+          "type": "game_art",
+          "filename": "red_official_origins.png",
+          "source": "https://bulbapedia.bulbagarden.net/wiki/Red_(game)",
+          "resolution": "2048x2048",
+          "region": "kanto",
+          "verified": false
+        }
+      ],
+      "team": [
+        { "pokemon_name": "Pikachu", "pokemon_id": 25, "is_signature": true },
+        { "pokemon_name": "Charizard", "pokemon_id": 6, "is_signature": true },
+        { "pokemon_name": "Venusaur", "pokemon_id": 3, "is_signature": true },
+        { "pokemon_name": "Blastoise", "pokemon_id": 9, "is_signature": true },
+        { "pokemon_name": "Snorlax", "pokemon_id": 143, "is_signature": true },
+        { "pokemon_name": "Espeon", "pokemon_id": 196, "is_signature": true }
+      ],
+      "canonical_image_source": "https://bulbapedia.bulbagarden.net/wiki/Red_(game)",
+      "notes": "First Kanto Champion. Silent legendary trainer."
+    },
+    {
+      "character": "Blue",
+      "slug": "blue",
+      "region": "Kanto",
+      "role": "Gym Leader / Former Champion",
+      "series": "Origins, Generations",
+      "images": [
+        {
+          "type": "game_art",
+          "filename": "blue_official_origins.png",
+          "source": "https://bulbapedia.bulbagarden.net/wiki/Blue_(game)",
+          "resolution": "2048x2048",
+          "region": "kanto",
+          "verified": false
+        }
+      ],
+      "team": [
+        { "pokemon_name": "Pidgeot", "pokemon_id": 18, "is_signature": true },
+        { "pokemon_name": "Alakazam", "pokemon_id": 65, "is_signature": true },
+        { "pokemon_name": "Rhydon", "pokemon_id": 112, "is_signature": true },
+        { "pokemon_name": "Arcanine", "pokemon_id": 59, "is_signature": true },
+        { "pokemon_name": "Exeggutor", "pokemon_id": 103, "is_signature": true },
+        { "pokemon_name": "Blastoise", "pokemon_id": 9, "is_signature": true }
+      ],
+      "canonical_image_source": "https://bulbapedia.bulbagarden.net/wiki/Blue_(game)",
+      "notes": "Red's rival. Former Kanto Champion, later Viridian Gym Leader."
     }
   ],
   "qa_report": {
@@ -227,20 +744,42 @@
       "Ash Ketchum",
       "Misty",
       "Brock",
-      "Serena",
-      "Dawn",
-      "Goh",
-      "Cynthia",
-      "Leon",
       "May",
-      "Clemont",
+      "Dawn",
+      "Serena",
       "Iris",
       "Cilan",
-      "Chloe"
+      "Clemont",
+      "Bonnie",
+      "Lillie",
+      "Goh",
+      "Chloe",
+      "Leon",
+      "Cynthia",
+      "Professor Oak",
+      "Professor Elm",
+      "Professor Birch",
+      "Professor Rowan",
+      "Professor Juniper",
+      "Professor Sycamore",
+      "Professor Kukui",
+      "Professor Magnolia",
+      "Lt. Surge",
+      "Erika",
+      "Sabrina",
+      "Blaine",
+      "Steven Stone",
+      "Red",
+      "Blue"
     ],
     "low_confidence_images": [],
     "pending_verification": [
-      "All character images require official source verification and replacement"
-    ]
+      "All character images require official source verification and copyright licensing",
+      "Source URLs provided point to official repositories (Bulbapedia, Serebii, Pokemon.com)",
+      "Manual download and licensing required - automated scraping prohibited due to copyright",
+      "Follow CANONICAL_IMAGE_GUIDE.md for proper image acquisition and verification"
+    ],
+    "copyright_notice": "Official Pokémon character artwork is protected by copyright. Images are owned by The Pokémon Company International, Nintendo, Game Freak, and Creatures Inc. This manifest provides metadata and source references only. Users must obtain proper licensing before downloading and using official artwork.",
+    "acquisition_instructions": "1. Visit the canonical_image_source URL for each character. 2. Locate official artwork in the specified resolution. 3. Verify image authenticity and source domain. 4. Download manually if you have proper licensing. 5. Save to src/assets/characters/[slug]/[filename]. 6. Update verified: true in manifest after confirmation."
   }
 }
