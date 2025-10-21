@@ -1,0 +1,631 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2025-01-15",
+  "totalPokemon": 1025,
+  "pokemon": [
+    {
+      "id": 1,
+      "name": "Bulbasaur",
+      "types": ["grass", "poison"],
+      "region": "kanto",
+      "generation": 1,
+      "stats": {
+        "hp": 45,
+        "attack": 49,
+        "defense": 49,
+        "specialAttack": 65,
+        "specialDefense": 65,
+        "speed": 45,
+        "total": 318
+      },
+      "abilities": [
+        { "name": "Overgrow", "isHidden": false },
+        { "name": "Chlorophyll", "isHidden": true }
+      ],
+      "height": 0.7,
+      "weight": 6.9,
+      "description": "A strange seed was planted on its back at birth. The plant sprouts and grows with this Pokémon.",
+      "category": "Seed Pokémon",
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
+      "shinyImage": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/1.png",
+      "isLegendary": false,
+      "isMythical": false,
+      "isMega": false,
+      "canMegaEvolve": false,
+      "evolvesToIds": [2]
+    },
+    {
+      "id": 2,
+      "name": "Ivysaur",
+      "types": ["grass", "poison"],
+      "region": "kanto",
+      "generation": 1,
+      "stats": {
+        "hp": 60,
+        "attack": 62,
+        "defense": 63,
+        "specialAttack": 80,
+        "specialDefense": 80,
+        "speed": 60,
+        "total": 405
+      },
+      "abilities": [
+        { "name": "Overgrow", "isHidden": false },
+        { "name": "Chlorophyll", "isHidden": true }
+      ],
+      "height": 1.0,
+      "weight": 13.0,
+      "description": "When the bulb on its back grows large, it appears to lose the ability to stand on its hind legs.",
+      "category": "Seed Pokémon",
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/2.png",
+      "shinyImage": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/2.png",
+      "isLegendary": false,
+      "isMythical": false,
+      "isMega": false,
+      "canMegaEvolve": false,
+      "evolvesFromId": 1,
+      "evolvesToIds": [3]
+    },
+    {
+      "id": 3,
+      "name": "Venusaur",
+      "types": ["grass", "poison"],
+      "region": "kanto",
+      "generation": 1,
+      "stats": {
+        "hp": 80,
+        "attack": 82,
+        "defense": 83,
+        "specialAttack": 100,
+        "specialDefense": 100,
+        "speed": 80,
+        "total": 525
+      },
+      "abilities": [
+        { "name": "Overgrow", "isHidden": false },
+        { "name": "Chlorophyll", "isHidden": true }
+      ],
+      "height": 2.0,
+      "weight": 100.0,
+      "description": "The plant blooms when it is absorbing solar energy. It stays on the move to seek sunlight.",
+      "category": "Seed Pokémon",
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/3.png",
+      "shinyImage": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/3.png",
+      "isLegendary": false,
+      "isMythical": false,
+      "isMega": false,
+      "canMegaEvolve": true,
+      "megaFormIds": [10033],
+      "evolvesFromId": 2
+    },
+    {
+      "id": 4,
+      "name": "Charmander",
+      "types": ["fire"],
+      "region": "kanto",
+      "generation": 1,
+      "stats": {
+        "hp": 39,
+        "attack": 52,
+        "defense": 43,
+        "specialAttack": 60,
+        "specialDefense": 50,
+        "speed": 65,
+        "total": 309
+      },
+      "abilities": [
+        { "name": "Blaze", "isHidden": false },
+        { "name": "Solar Power", "isHidden": true }
+      ],
+      "height": 0.6,
+      "weight": 8.5,
+      "description": "Obviously prefers hot places. When it rains, steam is said to spout from the tip of its tail.",
+      "category": "Lizard Pokémon",
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png",
+      "shinyImage": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/4.png",
+      "isLegendary": false,
+      "isMythical": false,
+      "isMega": false,
+      "canMegaEvolve": false,
+      "evolvesToIds": [5]
+    },
+    {
+      "id": 5,
+      "name": "Charmeleon",
+      "types": ["fire"],
+      "region": "kanto",
+      "generation": 1,
+      "stats": {
+        "hp": 58,
+        "attack": 64,
+        "defense": 58,
+        "specialAttack": 80,
+        "specialDefense": 65,
+        "speed": 80,
+        "total": 405
+      },
+      "abilities": [
+        { "name": "Blaze", "isHidden": false },
+        { "name": "Solar Power", "isHidden": true }
+      ],
+      "height": 1.1,
+      "weight": 19.0,
+      "description": "When it swings its burning tail, it elevates the temperature to unbearably high levels.",
+      "category": "Flame Pokémon",
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/5.png",
+      "shinyImage": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/5.png",
+      "isLegendary": false,
+      "isMythical": false,
+      "isMega": false,
+      "canMegaEvolve": false,
+      "evolvesFromId": 4,
+      "evolvesToIds": [6]
+    },
+    {
+      "id": 6,
+      "name": "Charizard",
+      "types": ["fire", "flying"],
+      "region": "kanto",
+      "generation": 1,
+      "stats": {
+        "hp": 78,
+        "attack": 84,
+        "defense": 78,
+        "specialAttack": 109,
+        "specialDefense": 85,
+        "speed": 100,
+        "total": 534
+      },
+      "abilities": [
+        { "name": "Blaze", "isHidden": false },
+        { "name": "Solar Power", "isHidden": true }
+      ],
+      "height": 1.7,
+      "weight": 90.5,
+      "description": "Spits fire that is hot enough to melt boulders. Known to cause forest fires unintentionally.",
+      "category": "Flame Pokémon",
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png",
+      "shinyImage": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/6.png",
+      "isLegendary": false,
+      "isMythical": false,
+      "isMega": false,
+      "canMegaEvolve": true,
+      "megaFormIds": [10034, 10035],
+      "evolvesFromId": 5
+    },
+    {
+      "id": 7,
+      "name": "Squirtle",
+      "types": ["water"],
+      "region": "kanto",
+      "generation": 1,
+      "stats": {
+        "hp": 44,
+        "attack": 48,
+        "defense": 65,
+        "specialAttack": 50,
+        "specialDefense": 64,
+        "speed": 43,
+        "total": 314
+      },
+      "abilities": [
+        { "name": "Torrent", "isHidden": false },
+        { "name": "Rain Dish", "isHidden": true }
+      ],
+      "height": 0.5,
+      "weight": 9.0,
+      "description": "After birth, its back swells and hardens into a shell. Powerfully sprays foam from its mouth.",
+      "category": "Tiny Turtle Pokémon",
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png",
+      "shinyImage": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/7.png",
+      "isLegendary": false,
+      "isMythical": false,
+      "isMega": false,
+      "canMegaEvolve": false,
+      "evolvesToIds": [8]
+    },
+    {
+      "id": 8,
+      "name": "Wartortle",
+      "types": ["water"],
+      "region": "kanto",
+      "generation": 1,
+      "stats": {
+        "hp": 59,
+        "attack": 63,
+        "defense": 80,
+        "specialAttack": 65,
+        "specialDefense": 80,
+        "speed": 58,
+        "total": 405
+      },
+      "abilities": [
+        { "name": "Torrent", "isHidden": false },
+        { "name": "Rain Dish", "isHidden": true }
+      ],
+      "height": 1.0,
+      "weight": 22.5,
+      "description": "Often hides in water to stalk unwary prey. For swimming fast, it moves its ears to maintain balance.",
+      "category": "Turtle Pokémon",
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/8.png",
+      "shinyImage": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/8.png",
+      "isLegendary": false,
+      "isMythical": false,
+      "isMega": false,
+      "canMegaEvolve": false,
+      "evolvesFromId": 7,
+      "evolvesToIds": [9]
+    },
+    {
+      "id": 9,
+      "name": "Blastoise",
+      "types": ["water"],
+      "region": "kanto",
+      "generation": 1,
+      "stats": {
+        "hp": 79,
+        "attack": 83,
+        "defense": 100,
+        "specialAttack": 85,
+        "specialDefense": 105,
+        "speed": 78,
+        "total": 530
+      },
+      "abilities": [
+        { "name": "Torrent", "isHidden": false },
+        { "name": "Rain Dish", "isHidden": true }
+      ],
+      "height": 1.6,
+      "weight": 85.5,
+      "description": "A brutal Pokémon with pressurized water jets on its shell. They are used for high-speed tackles.",
+      "category": "Shellfish Pokémon",
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/9.png",
+      "shinyImage": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/9.png",
+      "isLegendary": false,
+      "isMythical": false,
+      "isMega": false,
+      "canMegaEvolve": true,
+      "megaFormIds": [10036],
+      "evolvesFromId": 8
+    },
+    {
+      "id": 25,
+      "name": "Pikachu",
+      "types": ["electric"],
+      "region": "kanto",
+      "generation": 1,
+      "stats": {
+        "hp": 35,
+        "attack": 55,
+        "defense": 40,
+        "specialAttack": 50,
+        "specialDefense": 50,
+        "speed": 90,
+        "total": 320
+      },
+      "abilities": [
+        { "name": "Static", "isHidden": false },
+        { "name": "Lightning Rod", "isHidden": true }
+      ],
+      "height": 0.4,
+      "weight": 6.0,
+      "description": "When several of these Pokémon gather, their electricity could build and cause lightning storms.",
+      "category": "Mouse Pokémon",
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png",
+      "shinyImage": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/25.png",
+      "isLegendary": false,
+      "isMythical": false,
+      "isMega": false,
+      "canMegaEvolve": false,
+      "evolvesFromId": 172,
+      "evolvesToIds": [26]
+    },
+    {
+      "id": 26,
+      "name": "Raichu",
+      "types": ["electric"],
+      "region": "kanto",
+      "generation": 1,
+      "stats": {
+        "hp": 60,
+        "attack": 90,
+        "defense": 55,
+        "specialAttack": 90,
+        "specialDefense": 80,
+        "speed": 110,
+        "total": 485
+      },
+      "abilities": [
+        { "name": "Static", "isHidden": false },
+        { "name": "Lightning Rod", "isHidden": true }
+      ],
+      "height": 0.8,
+      "weight": 30.0,
+      "description": "Its long tail serves as a ground to protect itself from its own high-voltage power.",
+      "category": "Mouse Pokémon",
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/26.png",
+      "shinyImage": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/26.png",
+      "isLegendary": false,
+      "isMythical": false,
+      "isMega": false,
+      "canMegaEvolve": false,
+      "evolvesFromId": 25
+    },
+    {
+      "id": 133,
+      "name": "Eevee",
+      "types": ["normal"],
+      "region": "kanto",
+      "generation": 1,
+      "stats": {
+        "hp": 55,
+        "attack": 55,
+        "defense": 50,
+        "specialAttack": 45,
+        "specialDefense": 65,
+        "speed": 55,
+        "total": 325
+      },
+      "abilities": [
+        { "name": "Run Away", "isHidden": false },
+        { "name": "Adaptability", "isHidden": false },
+        { "name": "Anticipation", "isHidden": true }
+      ],
+      "height": 0.3,
+      "weight": 6.5,
+      "description": "Its genetic code is irregular. It may mutate if it is exposed to radiation from element stones.",
+      "category": "Evolution Pokémon",
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/133.png",
+      "shinyImage": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/133.png",
+      "isLegendary": false,
+      "isMythical": false,
+      "isMega": false,
+      "canMegaEvolve": false,
+      "evolvesToIds": [134, 135, 136, 196, 197, 470, 471, 700]
+    },
+    {
+      "id": 134,
+      "name": "Vaporeon",
+      "types": ["water"],
+      "region": "kanto",
+      "generation": 1,
+      "stats": {
+        "hp": 130,
+        "attack": 65,
+        "defense": 60,
+        "specialAttack": 110,
+        "specialDefense": 95,
+        "speed": 65,
+        "total": 525
+      },
+      "abilities": [
+        { "name": "Water Absorb", "isHidden": false },
+        { "name": "Hydration", "isHidden": true }
+      ],
+      "height": 1.0,
+      "weight": 29.0,
+      "description": "Lives close to water. Its long tail is ridged with a fin which is often mistaken for a mermaid's.",
+      "category": "Bubble Jet Pokémon",
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/134.png",
+      "shinyImage": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/134.png",
+      "isLegendary": false,
+      "isMythical": false,
+      "isMega": false,
+      "canMegaEvolve": false,
+      "evolvesFromId": 133
+    },
+    {
+      "id": 150,
+      "name": "Mewtwo",
+      "types": ["psychic"],
+      "region": "kanto",
+      "generation": 1,
+      "stats": {
+        "hp": 106,
+        "attack": 110,
+        "defense": 90,
+        "specialAttack": 154,
+        "specialDefense": 90,
+        "speed": 130,
+        "total": 680
+      },
+      "abilities": [
+        { "name": "Pressure", "isHidden": false },
+        { "name": "Unnerve", "isHidden": true }
+      ],
+      "height": 2.0,
+      "weight": 122.0,
+      "description": "It was created by a scientist after years of horrific gene splicing and DNA engineering experiments.",
+      "category": "Genetic Pokémon",
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/150.png",
+      "shinyImage": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/150.png",
+      "isLegendary": true,
+      "isMythical": false,
+      "isMega": false,
+      "canMegaEvolve": true,
+      "megaFormIds": [10037, 10038]
+    },
+    {
+      "id": 151,
+      "name": "Mew",
+      "types": ["psychic"],
+      "region": "kanto",
+      "generation": 1,
+      "stats": {
+        "hp": 100,
+        "attack": 100,
+        "defense": 100,
+        "specialAttack": 100,
+        "specialDefense": 100,
+        "speed": 100,
+        "total": 600
+      },
+      "abilities": [
+        { "name": "Synchronize", "isHidden": false }
+      ],
+      "height": 0.4,
+      "weight": 4.0,
+      "description": "So rare that it is still said to be a mirage by many experts. Only a few people have seen it worldwide.",
+      "category": "New Species Pokémon",
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/151.png",
+      "shinyImage": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/151.png",
+      "isLegendary": false,
+      "isMythical": true,
+      "isMega": false,
+      "canMegaEvolve": false
+    },
+    {
+      "id": 172,
+      "name": "Pichu",
+      "types": ["electric"],
+      "region": "johto",
+      "generation": 2,
+      "stats": {
+        "hp": 20,
+        "attack": 40,
+        "defense": 15,
+        "specialAttack": 35,
+        "specialDefense": 35,
+        "speed": 60,
+        "total": 205
+      },
+      "abilities": [
+        { "name": "Static", "isHidden": false },
+        { "name": "Lightning Rod", "isHidden": true }
+      ],
+      "height": 0.3,
+      "weight": 2.0,
+      "description": "It is not yet skilled at storing electricity. It may send out a jolt if amused or startled.",
+      "category": "Tiny Mouse Pokémon",
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/172.png",
+      "shinyImage": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/172.png",
+      "isLegendary": false,
+      "isMythical": false,
+      "isMega": false,
+      "canMegaEvolve": false,
+      "evolvesToIds": [25]
+    },
+    {
+      "id": 249,
+      "name": "Lugia",
+      "types": ["psychic", "flying"],
+      "region": "johto",
+      "generation": 2,
+      "stats": {
+        "hp": 106,
+        "attack": 90,
+        "defense": 130,
+        "specialAttack": 90,
+        "specialDefense": 154,
+        "speed": 110,
+        "total": 680
+      },
+      "abilities": [
+        { "name": "Pressure", "isHidden": false },
+        { "name": "Multiscale", "isHidden": true }
+      ],
+      "height": 5.2,
+      "weight": 216.0,
+      "description": "It is said to be the guardian of the seas. It is rumored to have been seen on the night of a storm.",
+      "category": "Diving Pokémon",
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/249.png",
+      "shinyImage": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/249.png",
+      "isLegendary": true,
+      "isMythical": false,
+      "isMega": false,
+      "canMegaEvolve": false
+    },
+    {
+      "id": 384,
+      "name": "Rayquaza",
+      "types": ["dragon", "flying"],
+      "region": "hoenn",
+      "generation": 3,
+      "stats": {
+        "hp": 105,
+        "attack": 150,
+        "defense": 90,
+        "specialAttack": 150,
+        "specialDefense": 90,
+        "speed": 95,
+        "total": 680
+      },
+      "abilities": [
+        { "name": "Air Lock", "isHidden": false }
+      ],
+      "height": 7.0,
+      "weight": 206.5,
+      "description": "It lives in the ozone layer far above the clouds and cannot be seen from the ground.",
+      "category": "Sky High Pokémon",
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/384.png",
+      "shinyImage": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/384.png",
+      "isLegendary": true,
+      "isMythical": false,
+      "isMega": false,
+      "canMegaEvolve": true,
+      "megaFormIds": [10079]
+    },
+    {
+      "id": 448,
+      "name": "Lucario",
+      "types": ["fighting", "steel"],
+      "region": "sinnoh",
+      "generation": 4,
+      "stats": {
+        "hp": 70,
+        "attack": 110,
+        "defense": 70,
+        "specialAttack": 115,
+        "specialDefense": 70,
+        "speed": 90,
+        "total": 525
+      },
+      "abilities": [
+        { "name": "Steadfast", "isHidden": false },
+        { "name": "Inner Focus", "isHidden": false },
+        { "name": "Justified", "isHidden": true }
+      ],
+      "height": 1.2,
+      "weight": 54.0,
+      "description": "It's said that no foe can remain invisible to Lucario, since it can detect auras. Even foes it could not otherwise see.",
+      "category": "Aura Pokémon",
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/448.png",
+      "shinyImage": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/448.png",
+      "isLegendary": false,
+      "isMythical": false,
+      "isMega": false,
+      "canMegaEvolve": true,
+      "megaFormIds": [10045],
+      "evolvesFromId": 447
+    },
+    {
+      "id": 493,
+      "name": "Arceus",
+      "types": ["normal"],
+      "region": "sinnoh",
+      "generation": 4,
+      "stats": {
+        "hp": 120,
+        "attack": 120,
+        "defense": 120,
+        "specialAttack": 120,
+        "specialDefense": 120,
+        "speed": 120,
+        "total": 720
+      },
+      "abilities": [
+        { "name": "Multitype", "isHidden": false }
+      ],
+      "height": 3.2,
+      "weight": 320.0,
+      "description": "It is described in mythology as the Pokémon that shaped the universe with its 1,000 arms.",
+      "category": "Alpha Pokémon",
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/493.png",
+      "shinyImage": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/493.png",
+      "isLegendary": false,
+      "isMythical": true,
+      "isMega": false,
+      "canMegaEvolve": false
+    }
+  ]
+}

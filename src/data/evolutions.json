@@ -1,0 +1,172 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2025-01-15",
+  "chains": [
+    {
+      "species": 1,
+      "evolvesTo": [
+        {
+          "species": 2,
+          "requirement": {
+            "method": "level",
+            "level": 16
+          }
+        }
+      ]
+    },
+    {
+      "species": 2,
+      "evolvesTo": [
+        {
+          "species": 3,
+          "requirement": {
+            "method": "level",
+            "level": 32
+          }
+        }
+      ]
+    },
+    {
+      "species": 4,
+      "evolvesTo": [
+        {
+          "species": 5,
+          "requirement": {
+            "method": "level",
+            "level": 16
+          }
+        }
+      ]
+    },
+    {
+      "species": 5,
+      "evolvesTo": [
+        {
+          "species": 6,
+          "requirement": {
+            "method": "level",
+            "level": 36
+          }
+        }
+      ]
+    },
+    {
+      "species": 7,
+      "evolvesTo": [
+        {
+          "species": 8,
+          "requirement": {
+            "method": "level",
+            "level": 16
+          }
+        }
+      ]
+    },
+    {
+      "species": 8,
+      "evolvesTo": [
+        {
+          "species": 9,
+          "requirement": {
+            "method": "level",
+            "level": 36
+          }
+        }
+      ]
+    },
+    {
+      "species": 172,
+      "evolvesTo": [
+        {
+          "species": 25,
+          "requirement": {
+            "method": "friendship",
+            "friendship": 220,
+            "notes": "High friendship during day"
+          }
+        }
+      ]
+    },
+    {
+      "species": 25,
+      "evolvesTo": [
+        {
+          "species": 26,
+          "requirement": {
+            "method": "stone",
+            "stone": "Thunder Stone"
+          }
+        }
+      ]
+    },
+    {
+      "species": 133,
+      "evolvesTo": [
+        {
+          "species": 134,
+          "requirement": {
+            "method": "stone",
+            "stone": "Water Stone"
+          }
+        },
+        {
+          "species": 135,
+          "requirement": {
+            "method": "stone",
+            "stone": "Thunder Stone"
+          }
+        },
+        {
+          "species": 136,
+          "requirement": {
+            "method": "stone",
+            "stone": "Fire Stone"
+          }
+        },
+        {
+          "species": 196,
+          "requirement": {
+            "method": "friendship",
+            "friendship": 220,
+            "time": "day",
+            "notes": "High friendship during day"
+          }
+        },
+        {
+          "species": 197,
+          "requirement": {
+            "method": "friendship",
+            "friendship": 220,
+            "time": "night",
+            "notes": "High friendship during night"
+          }
+        },
+        {
+          "species": 470,
+          "requirement": {
+            "method": "location",
+            "location": "Moss Rock",
+            "notes": "Level up near Moss Rock"
+          }
+        },
+        {
+          "species": 471,
+          "requirement": {
+            "method": "location",
+            "location": "Ice Rock",
+            "notes": "Level up near Ice Rock"
+          }
+        },
+        {
+          "species": 700,
+          "requirement": {
+            "method": "friendship",
+            "friendship": 220,
+            "move": "Fairy-type move",
+            "notes": "Level up with high friendship knowing a Fairy-type move"
+          }
+        }
+      ]
+    }
+  ]
+}

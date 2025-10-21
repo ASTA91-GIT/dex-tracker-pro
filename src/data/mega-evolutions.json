@@ -1,0 +1,134 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2025-01-15",
+  "megaEvolutions": [
+    {
+      "basePokemonId": 3,
+      "megaPokemonId": 10033,
+      "name": "Mega Venusaur",
+      "stone": "Venusaurite",
+      "types": ["grass", "poison"],
+      "ability": "Thick Fat",
+      "statBoosts": {
+        "hp": 0,
+        "attack": 18,
+        "defense": 23,
+        "specialAttack": 22,
+        "specialDefense": 20,
+        "speed": 0
+      }
+    },
+    {
+      "basePokemonId": 6,
+      "megaPokemonId": 10034,
+      "name": "Mega Charizard X",
+      "stone": "Charizardite X",
+      "types": ["fire", "dragon"],
+      "ability": "Tough Claws",
+      "statBoosts": {
+        "hp": 0,
+        "attack": 46,
+        "defense": 33,
+        "specialAttack": 21,
+        "specialDefense": 20,
+        "speed": 0
+      }
+    },
+    {
+      "basePokemonId": 6,
+      "megaPokemonId": 10035,
+      "name": "Mega Charizard Y",
+      "stone": "Charizardite Y",
+      "types": ["fire", "flying"],
+      "ability": "Drought",
+      "statBoosts": {
+        "hp": 0,
+        "attack": 10,
+        "defense": 18,
+        "specialAttack": 51,
+        "specialDefense": 35,
+        "speed": 0
+      }
+    },
+    {
+      "basePokemonId": 9,
+      "megaPokemonId": 10036,
+      "name": "Mega Blastoise",
+      "stone": "Blastoisinite",
+      "types": ["water"],
+      "ability": "Mega Launcher",
+      "statBoosts": {
+        "hp": 0,
+        "attack": 16,
+        "defense": 20,
+        "specialAttack": 50,
+        "specialDefense": 20,
+        "speed": 0
+      }
+    },
+    {
+      "basePokemonId": 150,
+      "megaPokemonId": 10037,
+      "name": "Mega Mewtwo X",
+      "stone": "Mewtwonite X",
+      "types": ["psychic", "fighting"],
+      "ability": "Steadfast",
+      "statBoosts": {
+        "hp": 0,
+        "attack": 80,
+        "defense": 10,
+        "specialAttack": 34,
+        "specialDefense": 0,
+        "speed": 0
+      }
+    },
+    {
+      "basePokemonId": 150,
+      "megaPokemonId": 10038,
+      "name": "Mega Mewtwo Y",
+      "stone": "Mewtwonite Y",
+      "types": ["psychic"],
+      "ability": "Insomnia",
+      "statBoosts": {
+        "hp": 0,
+        "attack": 40,
+        "defense": -20,
+        "specialAttack": 64,
+        "specialDefense": -20,
+        "speed": 60
+      }
+    },
+    {
+      "basePokemonId": 448,
+      "megaPokemonId": 10045,
+      "name": "Mega Lucario",
+      "stone": "Lucarionite",
+      "types": ["fighting", "steel"],
+      "ability": "Adaptability",
+      "statBoosts": {
+        "hp": 0,
+        "attack": 35,
+        "defense": 18,
+        "specialAttack": 30,
+        "specialDefense": 15,
+        "speed": 22
+      }
+    },
+    {
+      "basePokemonId": 384,
+      "megaPokemonId": 10079,
+      "name": "Mega Rayquaza",
+      "stone": "None (Dragon Ascent)",
+      "types": ["dragon", "flying"],
+      "ability": "Delta Stream",
+      "statBoosts": {
+        "hp": 0,
+        "attack": 30,
+        "defense": 0,
+        "specialAttack": 30,
+        "specialDefense": 0,
+        "speed": 25
+      }
+    }
+  ]
+}
