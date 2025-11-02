@@ -1,0 +1,166 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2025-01-01",
+  "professors": [
+    {
+      "id": "oak",
+      "name": "Professor Oak",
+      "fullName": "Samuel Oak",
+      "region": "Kanto",
+      "generation": 1,
+      "specialty": "Pokémon-Human relationships",
+      "description": "The renowned Pokémon researcher who offers new trainers their first Pokémon.",
+      "starterPokemon": ["Bulbasaur", "Charmander", "Squirtle"],
+      "lab": "Pallet Town",
+      "famousFor": "Creating the Pokédex",
+      "appearance": {
+        "hairColor": "gray",
+        "outfit": "white lab coat"
+      }
+    },
+    {
+      "id": "elm",
+      "name": "Professor Elm",
+      "fullName": "Professor Elm",
+      "region": "Johto",
+      "generation": 2,
+      "specialty": "Pokémon breeding and evolution",
+      "description": "A student of Professor Oak, specializing in evolution research.",
+      "starterPokemon": ["Chikorita", "Cyndaquil", "Totodile"],
+      "lab": "New Bark Town",
+      "famousFor": "Discovering Pokémon eggs",
+      "appearance": {
+        "hairColor": "brown",
+        "outfit": "white lab coat"
+      }
+    },
+    {
+      "id": "birch",
+      "name": "Professor Birch",
+      "fullName": "Professor Birch",
+      "region": "Hoenn",
+      "generation": 3,
+      "specialty": "Pokémon habitats and distribution",
+      "description": "A field researcher who studies Pokémon in their natural habitats.",
+      "starterPokemon": ["Treecko", "Torchic", "Mudkip"],
+      "lab": "Littleroot Town",
+      "famousFor": "Field research methodology",
+      "appearance": {
+        "hairColor": "brown",
+        "outfit": "field research attire"
+      }
+    },
+    {
+      "id": "rowan",
+      "name": "Professor Rowan",
+      "fullName": "Professor Rowan",
+      "region": "Sinnoh",
+      "generation": 4,
+      "specialty": "Pokémon evolution",
+      "description": "A stern but brilliant researcher studying how Pokémon evolve.",
+      "starterPokemon": ["Turtwig", "Chimchar", "Piplup"],
+      "lab": "Sandgem Town",
+      "famousFor": "Evolution studies",
+      "appearance": {
+        "hairColor": "gray",
+        "outfit": "formal suit with lab coat"
+      }
+    },
+    {
+      "id": "juniper",
+      "name": "Professor Juniper",
+      "fullName": "Aurea Juniper",
+      "region": "Unova",
+      "generation": 5,
+      "specialty": "Origins of Pokémon",
+      "description": "The first female main-series professor, researching where Pokémon come from.",
+      "starterPokemon": ["Snivy", "Tepig", "Oshawott"],
+      "lab": "Nuvema Town",
+      "famousFor": "First female professor in main games",
+      "appearance": {
+        "hairColor": "green",
+        "outfit": "white lab coat"
+      }
+    },
+    {
+      "id": "sycamore",
+      "name": "Professor Sycamore",
+      "fullName": "Augustine Sycamore",
+      "region": "Kalos",
+      "generation": 6,
+      "specialty": "Mega Evolution",
+      "description": "A charismatic researcher who discovered the secrets of Mega Evolution.",
+      "starterPokemon": ["Chespin", "Fennekin", "Froakie"],
+      "lab": "Lumiose City",
+      "famousFor": "Mega Evolution research",
+      "appearance": {
+        "hairColor": "black",
+        "outfit": "stylish suit"
+      }
+    },
+    {
+      "id": "kukui",
+      "name": "Professor Kukui",
+      "fullName": "Professor Kukui",
+      "region": "Alola",
+      "generation": 7,
+      "specialty": "Pokémon moves",
+      "description": "A passionate researcher who studies Pokémon moves by taking them himself.",
+      "starterPokemon": ["Rowlet", "Litten", "Popplio"],
+      "lab": "Route 1, Alola",
+      "famousFor": "Creating the Alola Pokémon League",
+      "appearance": {
+        "hairColor": "black",
+        "outfit": "casual island wear"
+      }
+    },
+    {
+      "id": "magnolia",
+      "name": "Professor Magnolia",
+      "fullName": "Professor Magnolia",
+      "region": "Galar",
+      "generation": 8,
+      "specialty": "Dynamax phenomenon",
+      "description": "The leading authority on the Dynamax phenomenon in Galar.",
+      "starterPokemon": ["Grookey", "Scorbunny", "Sobble"],
+      "lab": "Wedgehurst",
+      "famousFor": "Dynamax research",
+      "appearance": {
+        "hairColor": "gray",
+        "outfit": "purple vest and white shirt"
+      }
+    },
+    {
+      "id": "sada",
+      "name": "Professor Sada",
+      "fullName": "Professor Sada",
+      "region": "Paldea",
+      "generation": 9,
+      "specialty": "Ancient Pokémon",
+      "description": "A professor researching the ecosystem of ancient Paldea (Scarlet version).",
+      "starterPokemon": ["Sprigatito", "Fuecoco", "Quaxly"],
+      "lab": "Cabo Poco",
+      "famousFor": "Paradox Pokémon research",
+      "appearance": {
+        "hairColor": "orange",
+        "outfit": "primitive-styled outfit"
+      }
+    },
+    {
+      "id": "turo",
+      "name": "Professor Turo",
+      "fullName": "Professor Turo",
+      "region": "Paldea",
+      "generation": 9,
+      "specialty": "Future Pokémon",
+      "description": "A professor researching the ecosystem of future Paldea (Violet version).",
+      "starterPokemon": ["Sprigatito", "Fuecoco", "Quaxly"],
+      "lab": "Cabo Poco",
+      "famousFor": "Paradox Pokémon research",
+      "appearance": {
+        "hairColor": "purple",
+        "outfit": "futuristic bodysuit"
+      }
+    }
+  ]
+}

@@ -1,0 +1,172 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2025-01-01",
+  "gymLeaders": [
+    {
+      "id": "brock",
+      "name": "Brock",
+      "region": "kanto",
+      "city": "Pewter City",
+      "type": "rock",
+      "badge": "Boulder Badge",
+      "generation": 1,
+      "team": [
+        { "pokemon_id": 74, "pokemon_name": "Geodude", "level": 12 },
+        { "pokemon_id": 95, "pokemon_name": "Onix", "level": 14 }
+      ],
+      "description": "The Rock-solid Pokémon Trainer!",
+      "specialty": "Defensive strategies"
+    },
+    {
+      "id": "misty",
+      "name": "Misty",
+      "region": "kanto",
+      "city": "Cerulean City",
+      "type": "water",
+      "badge": "Cascade Badge",
+      "generation": 1,
+      "team": [
+        { "pokemon_id": 120, "pokemon_name": "Staryu", "level": 18 },
+        { "pokemon_id": 121, "pokemon_name": "Starmie", "level": 21 }
+      ],
+      "description": "The Tomboyish Mermaid!",
+      "specialty": "Water-type tactics"
+    },
+    {
+      "id": "lt_surge",
+      "name": "Lt. Surge",
+      "region": "kanto",
+      "city": "Vermilion City",
+      "type": "electric",
+      "badge": "Thunder Badge",
+      "generation": 1,
+      "team": [
+        { "pokemon_id": 100, "pokemon_name": "Voltorb", "level": 21 },
+        { "pokemon_id": 25, "pokemon_name": "Pikachu", "level": 18 },
+        { "pokemon_id": 26, "pokemon_name": "Raichu", "level": 24 }
+      ],
+      "description": "The Lightning American!",
+      "specialty": "Paralysis and high voltage"
+    },
+    {
+      "id": "erika",
+      "name": "Erika",
+      "region": "kanto",
+      "city": "Celadon City",
+      "type": "grass",
+      "badge": "Rainbow Badge",
+      "generation": 1,
+      "team": [
+        { "pokemon_id": 70, "pokemon_name": "Weepinbell", "level": 29 },
+        { "pokemon_id": 114, "pokemon_name": "Tangela", "level": 24 },
+        { "pokemon_id": 45, "pokemon_name": "Vileplume", "level": 29 }
+      ],
+      "description": "The Nature-Loving Princess!",
+      "specialty": "Status conditions"
+    },
+    {
+      "id": "sabrina",
+      "name": "Sabrina",
+      "region": "kanto",
+      "city": "Saffron City",
+      "type": "psychic",
+      "badge": "Marsh Badge",
+      "generation": 1,
+      "team": [
+        { "pokemon_id": 64, "pokemon_name": "Kadabra", "level": 38 },
+        { "pokemon_id": 122, "pokemon_name": "Mr. Mime", "level": 37 },
+        { "pokemon_id": 49, "pokemon_name": "Venomoth", "level": 38 },
+        { "pokemon_id": 65, "pokemon_name": "Alakazam", "level": 43 }
+      ],
+      "description": "The Master of Psychic Pokémon!",
+      "specialty": "Psychic-type mastery"
+    },
+    {
+      "id": "blaine",
+      "name": "Blaine",
+      "region": "kanto",
+      "city": "Cinnabar Island",
+      "type": "fire",
+      "badge": "Volcano Badge",
+      "generation": 1,
+      "team": [
+        { "pokemon_id": 58, "pokemon_name": "Growlithe", "level": 42 },
+        { "pokemon_id": 77, "pokemon_name": "Ponyta", "level": 40 },
+        { "pokemon_id": 78, "pokemon_name": "Rapidash", "level": 42 },
+        { "pokemon_id": 59, "pokemon_name": "Arcanine", "level": 47 }
+      ],
+      "description": "The Hotheaded Quiz Master!",
+      "specialty": "Burn and high attack"
+    },
+    {
+      "id": "cynthia",
+      "name": "Cynthia",
+      "region": "sinnoh",
+      "role": "champion",
+      "type": "mixed",
+      "generation": 4,
+      "team": [
+        { "pokemon_id": 442, "pokemon_name": "Spiritomb", "level": 61, "is_signature": true },
+        { "pokemon_id": 445, "pokemon_name": "Garchomp", "level": 66, "is_signature": true },
+        { "pokemon_id": 407, "pokemon_name": "Roserade", "level": 60 },
+        { "pokemon_id": 350, "pokemon_name": "Milotic", "level": 63 },
+        { "pokemon_id": 448, "pokemon_name": "Lucario", "level": 63 },
+        { "pokemon_id": 430, "pokemon_name": "Togekiss", "level": 63 }
+      ],
+      "description": "Sinnoh Champion and one of the strongest trainers in history.",
+      "specialty": "Balanced team with powerful coverage"
+    },
+    {
+      "id": "leon",
+      "name": "Leon",
+      "region": "galar",
+      "role": "champion",
+      "type": "mixed",
+      "generation": 8,
+      "team": [
+        { "pokemon_id": 823, "pokemon_name": "Corviknight", "level": 62 },
+        { "pokemon_id": 445, "pokemon_name": "Dragapult", "level": 62 },
+        { "pokemon_id": 844, "pokemon_name": "Sandaconda", "level": 62 },
+        { "pokemon_id": 6, "pokemon_name": "Charizard", "level": 65, "is_signature": true, "canGigantamax": true }
+      ],
+      "description": "The undefeated Champion of Galar.",
+      "specialty": "Dynamax and overwhelming offense"
+    },
+    {
+      "id": "steven_stone",
+      "name": "Steven Stone",
+      "region": "hoenn",
+      "role": "champion",
+      "type": "steel",
+      "generation": 3,
+      "team": [
+        { "pokemon_id": 227, "pokemon_name": "Skarmory", "level": 57 },
+        { "pokemon_id": 346, "pokemon_name": "Cradily", "level": 56 },
+        { "pokemon_id": 344, "pokemon_name": "Claydol", "level": 55 },
+        { "pokemon_id": 369, "pokemon_name": "Relicanth", "level": 56 },
+        { "pokemon_id": 344, "pokemon_name": "Aggron", "level": 56 },
+        { "pokemon_id": 376, "pokemon_name": "Metagross", "level": 58, "is_signature": true }
+      ],
+      "description": "The Steel-type Champion of Hoenn.",
+      "specialty": "Defensive Steel-types"
+    },
+    {
+      "id": "blue",
+      "name": "Blue",
+      "region": "kanto",
+      "role": "champion",
+      "type": "mixed",
+      "generation": 1,
+      "team": [
+        { "pokemon_id": 18, "pokemon_name": "Pidgeot", "level": 59 },
+        { "pokemon_id": 65, "pokemon_name": "Alakazam", "level": 57 },
+        { "pokemon_id": 112, "pokemon_name": "Rhydon", "level": 59 },
+        { "pokemon_id": 130, "pokemon_name": "Gyarados", "level": 58 },
+        { "pokemon_id": 59, "pokemon_name": "Arcanine", "level": 59 },
+        { "pokemon_id": 3, "pokemon_name": "Venusaur", "level": 63, "is_signature": true }
+      ],
+      "description": "Your rival and the Pokémon Champion of Kanto.",
+      "specialty": "Well-rounded team"
+    }
+  ]
+}

@@ -1,0 +1,194 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2025-01-01",
+  "regions": [
+    {
+      "id": "kanto",
+      "name": "Kanto",
+      "generation": 1,
+      "description": "The first region introduced in Pokémon Red and Blue, home to the original 151 Pokémon.",
+      "professor": "Professor Oak",
+      "starterPokemon": [1, 4, 7],
+      "nativePokemonRange": [1, 151],
+      "gymLeaders": [
+        { "name": "Brock", "city": "Pewter City", "type": "rock", "badge": "Boulder Badge" },
+        { "name": "Misty", "city": "Cerulean City", "type": "water", "badge": "Cascade Badge" },
+        { "name": "Lt. Surge", "city": "Vermilion City", "type": "electric", "badge": "Thunder Badge" },
+        { "name": "Erika", "city": "Celadon City", "type": "grass", "badge": "Rainbow Badge" },
+        { "name": "Koga", "city": "Fuchsia City", "type": "poison", "badge": "Soul Badge" },
+        { "name": "Sabrina", "city": "Saffron City", "type": "psychic", "badge": "Marsh Badge" },
+        { "name": "Blaine", "city": "Cinnabar Island", "type": "fire", "badge": "Volcano Badge" },
+        { "name": "Giovanni", "city": "Viridian City", "type": "ground", "badge": "Earth Badge" }
+      ],
+      "eliteFour": ["Lorelei", "Bruno", "Agatha", "Lance"],
+      "champion": "Blue"
+    },
+    {
+      "id": "johto",
+      "name": "Johto",
+      "generation": 2,
+      "description": "Introduced in Pokémon Gold and Silver, featuring 100 new Pokémon.",
+      "professor": "Professor Elm",
+      "starterPokemon": [152, 155, 158],
+      "nativePokemonRange": [152, 251],
+      "gymLeaders": [
+        { "name": "Falkner", "city": "Violet City", "type": "flying", "badge": "Zephyr Badge" },
+        { "name": "Bugsy", "city": "Azalea Town", "type": "bug", "badge": "Hive Badge" },
+        { "name": "Whitney", "city": "Goldenrod City", "type": "normal", "badge": "Plain Badge" },
+        { "name": "Morty", "city": "Ecruteak City", "type": "ghost", "badge": "Fog Badge" },
+        { "name": "Chuck", "city": "Cianwood City", "type": "fighting", "badge": "Storm Badge" },
+        { "name": "Jasmine", "city": "Olivine City", "type": "steel", "badge": "Mineral Badge" },
+        { "name": "Pryce", "city": "Mahogany Town", "type": "ice", "badge": "Glacier Badge" },
+        { "name": "Clair", "city": "Blackthorn City", "type": "dragon", "badge": "Rising Badge" }
+      ],
+      "eliteFour": ["Will", "Koga", "Bruno", "Karen"],
+      "champion": "Lance"
+    },
+    {
+      "id": "hoenn",
+      "name": "Hoenn",
+      "generation": 3,
+      "description": "Featured in Pokémon Ruby and Sapphire, with 135 new species.",
+      "professor": "Professor Birch",
+      "starterPokemon": [252, 255, 258],
+      "nativePokemonRange": [252, 386],
+      "gymLeaders": [
+        { "name": "Roxanne", "city": "Rustboro City", "type": "rock", "badge": "Stone Badge" },
+        { "name": "Brawly", "city": "Dewford Town", "type": "fighting", "badge": "Knuckle Badge" },
+        { "name": "Wattson", "city": "Mauville City", "type": "electric", "badge": "Dynamo Badge" },
+        { "name": "Flannery", "city": "Lavaridge Town", "type": "fire", "badge": "Heat Badge" },
+        { "name": "Norman", "city": "Petalburg City", "type": "normal", "badge": "Balance Badge" },
+        { "name": "Winona", "city": "Fortree City", "type": "flying", "badge": "Feather Badge" },
+        { "name": "Tate & Liza", "city": "Mossdeep City", "type": "psychic", "badge": "Mind Badge" },
+        { "name": "Wallace", "city": "Sootopolis City", "type": "water", "badge": "Rain Badge" }
+      ],
+      "eliteFour": ["Sidney", "Phoebe", "Glacia", "Drake"],
+      "champion": "Steven Stone"
+    },
+    {
+      "id": "sinnoh",
+      "name": "Sinnoh",
+      "generation": 4,
+      "description": "Debuted in Pokémon Diamond and Pearl with 107 new Pokémon.",
+      "professor": "Professor Rowan",
+      "starterPokemon": [387, 390, 393],
+      "nativePokemonRange": [387, 493],
+      "gymLeaders": [
+        { "name": "Roark", "city": "Oreburgh City", "type": "rock", "badge": "Coal Badge" },
+        { "name": "Gardenia", "city": "Eterna City", "type": "grass", "badge": "Forest Badge" },
+        { "name": "Maylene", "city": "Veilstone City", "type": "fighting", "badge": "Cobble Badge" },
+        { "name": "Crasher Wake", "city": "Pastoria City", "type": "water", "badge": "Fen Badge" },
+        { "name": "Fantina", "city": "Hearthome City", "type": "ghost", "badge": "Relic Badge" },
+        { "name": "Byron", "city": "Canalave City", "type": "steel", "badge": "Mine Badge" },
+        { "name": "Candice", "city": "Snowpoint City", "type": "ice", "badge": "Icicle Badge" },
+        { "name": "Volkner", "city": "Sunyshore City", "type": "electric", "badge": "Beacon Badge" }
+      ],
+      "eliteFour": ["Aaron", "Bertha", "Flint", "Lucian"],
+      "champion": "Cynthia"
+    },
+    {
+      "id": "unova",
+      "name": "Unova",
+      "generation": 5,
+      "description": "Introduced in Pokémon Black and White with 156 entirely new species.",
+      "professor": "Professor Juniper",
+      "starterPokemon": [495, 498, 501],
+      "nativePokemonRange": [494, 649],
+      "gymLeaders": [
+        { "name": "Cilan", "city": "Striaton City", "type": "grass", "badge": "Trio Badge" },
+        { "name": "Lenora", "city": "Nacrene City", "type": "normal", "badge": "Basic Badge" },
+        { "name": "Burgh", "city": "Castelia City", "type": "bug", "badge": "Insect Badge" },
+        { "name": "Elesa", "city": "Nimbasa City", "type": "electric", "badge": "Bolt Badge" },
+        { "name": "Clay", "city": "Driftveil City", "type": "ground", "badge": "Quake Badge" },
+        { "name": "Skyla", "city": "Mistralton City", "type": "flying", "badge": "Jet Badge" },
+        { "name": "Brycen", "city": "Icirrus City", "type": "ice", "badge": "Freeze Badge" },
+        { "name": "Drayden", "city": "Opelucid City", "type": "dragon", "badge": "Legend Badge" }
+      ],
+      "eliteFour": ["Shauntal", "Grimsley", "Caitlin", "Marshal"],
+      "champion": "Alder"
+    },
+    {
+      "id": "kalos",
+      "name": "Kalos",
+      "generation": 6,
+      "description": "Featured in Pokémon X and Y, introducing 72 new Pokémon and Mega Evolution.",
+      "professor": "Professor Sycamore",
+      "starterPokemon": [650, 653, 656],
+      "nativePokemonRange": [650, 721],
+      "gymLeaders": [
+        { "name": "Viola", "city": "Santalune City", "type": "bug", "badge": "Bug Badge" },
+        { "name": "Grant", "city": "Cyllage City", "type": "rock", "badge": "Cliff Badge" },
+        { "name": "Korrina", "city": "Shalour City", "type": "fighting", "badge": "Rumble Badge" },
+        { "name": "Ramos", "city": "Coumarine City", "type": "grass", "badge": "Plant Badge" },
+        { "name": "Clemont", "city": "Lumiose City", "type": "electric", "badge": "Voltage Badge" },
+        { "name": "Valerie", "city": "Laverre City", "type": "fairy", "badge": "Fairy Badge" },
+        { "name": "Olympia", "city": "Anistar City", "type": "psychic", "badge": "Psychic Badge" },
+        { "name": "Wulfric", "city": "Snowbelle City", "type": "ice", "badge": "Iceberg Badge" }
+      ],
+      "eliteFour": ["Malva", "Siebold", "Wikstrom", "Drasna"],
+      "champion": "Diantha"
+    },
+    {
+      "id": "alola",
+      "name": "Alola",
+      "generation": 7,
+      "description": "Debuted in Pokémon Sun and Moon with island challenges instead of traditional gyms.",
+      "professor": "Professor Kukui",
+      "starterPokemon": [722, 725, 728],
+      "nativePokemonRange": [722, 809],
+      "gymLeaders": [],
+      "islandKahunas": [
+        { "name": "Hala", "island": "Melemele Island", "type": "fighting" },
+        { "name": "Olivia", "island": "Akala Island", "type": "rock" },
+        { "name": "Nanu", "island": "Ula'ula Island", "type": "dark" },
+        { "name": "Hapu", "island": "Poni Island", "type": "ground" }
+      ],
+      "eliteFour": ["Hala", "Olivia", "Acerola", "Kahili"],
+      "champion": "Professor Kukui"
+    },
+    {
+      "id": "galar",
+      "name": "Galar",
+      "generation": 8,
+      "description": "Featured in Pokémon Sword and Shield with 89 new Pokémon and Dynamax.",
+      "professor": "Professor Magnolia",
+      "starterPokemon": [810, 813, 816],
+      "nativePokemonRange": [810, 898],
+      "gymLeaders": [
+        { "name": "Milo", "city": "Turffield", "type": "grass", "badge": "Grass Badge" },
+        { "name": "Nessa", "city": "Hulbury", "type": "water", "badge": "Water Badge" },
+        { "name": "Kabu", "city": "Motostoke", "type": "fire", "badge": "Fire Badge" },
+        { "name": "Bea", "city": "Stow-on-Side", "type": "fighting", "badge": "Fighting Badge" },
+        { "name": "Allister", "city": "Stow-on-Side", "type": "ghost", "badge": "Ghost Badge" },
+        { "name": "Opal", "city": "Ballonlea", "type": "fairy", "badge": "Fairy Badge" },
+        { "name": "Gordie", "city": "Circhester", "type": "rock", "badge": "Rock Badge" },
+        { "name": "Melony", "city": "Circhester", "type": "ice", "badge": "Ice Badge" },
+        { "name": "Piers", "city": "Spikemuth", "type": "dark", "badge": "Dark Badge" },
+        { "name": "Raihan", "city": "Hammerlocke", "type": "dragon", "badge": "Dragon Badge" }
+      ],
+      "eliteFour": [],
+      "champion": "Leon"
+    },
+    {
+      "id": "paldea",
+      "name": "Paldea",
+      "generation": 9,
+      "description": "Introduced in Pokémon Scarlet and Violet with open-world exploration.",
+      "professor": "Professor Sada / Professor Turo",
+      "starterPokemon": [906, 909, 912],
+      "nativePokemonRange": [906, 1025],
+      "gymLeaders": [
+        { "name": "Katy", "city": "Cortondo", "type": "bug", "badge": "Bug Badge" },
+        { "name": "Brassius", "city": "Artazon", "type": "grass", "badge": "Grass Badge" },
+        { "name": "Iono", "city": "Levincia", "type": "electric", "badge": "Electric Badge" },
+        { "name": "Kofu", "city": "Cascarrafa", "type": "water", "badge": "Water Badge" },
+        { "name": "Larry", "city": "Medali", "type": "normal", "badge": "Normal Badge" },
+        { "name": "Ryme", "city": "Montenevera", "type": "ghost", "badge": "Ghost Badge" },
+        { "name": "Tulip", "city": "Alfornada", "type": "psychic", "badge": "Psychic Badge" },
+        { "name": "Grusha", "city": "Glaseado Mountain", "type": "ice", "badge": "Ice Badge" }
+      ],
+      "eliteFour": ["Rika", "Poppy", "Larry", "Hassel"],
+      "champion": "Geeta"
+    }
+  ]
+}
