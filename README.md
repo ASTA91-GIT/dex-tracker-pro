@@ -1,51 +1,106 @@
-# ⚡️ PokéTrack — The Ultimate Pokédex Experience  
-> _“Every Pokémon has a story — your job is to catch it, log it, and live it!”_
+<!-- PROJECT HEADER -->
+<h1 align="center">✨⚡ POKE-DEX ⚡✨</h1>
 
-Welcome, Trainer! 👋  
-**PokéTrack** is your all-in-one Pokédex and Pokémon companion app — built for modern Trainers who want to **track, collect, and master** all Pokémon from Gen 1 to the latest releases.  
-
----
-
-## 🌈 Features That Would Make Even Professor Oak Proud
-
-### 🎮 Become a True Trainer
-- Sign up, log in, and create your personal **Trainer Profile** using **Supabase Auth**.  
-- Level up as you catch and favorite Pokémon — earn badges, track milestones, and show off your collection.
-
-### 🧭 The Full Pokédex
-- Over **900+ Pokémon** including **Mega Evolutions**, **Gigantamax Forms**, and **Regional Variants**.  
-- Dynamic Pokédex cards featuring types, base stats, and sprites from the **PokéAPI**.  
-- Search, sort, and filter by **type, generation, region, or stat**.  
-- View shiny forms, alternate art, and full evolution chains.
-
-### ❤️ Your Pokémon, Your Way
-- Mark Pokémon as **Caught**, **Favorite**, or **Wanted**.  
-- Watch your PokéDex completion grow with animated progress bars and badges.  
-- Compare Pokémon stats head-to-head and plan your dream team.  
-
-### 🌗 Immersive UI
-- Fully responsive design built with **React** + **Tailwind CSS** + **Framer Motion**.  
-- Pokémon-inspired color palette: Pikachu Yellow ⚡, Poké Red 🔴, Cerulean Blue 🔵.  
-- Dark/Light Mode toggle styled like a Pokéball.  
-- Smooth transitions and glowing hover effects that feel straight out of a Poké Center.
+<p align="center">
+  <b>“Catch. Learn. Evolve. — Your Digital Pokémon Universe”</b><br>
+  <i>Created with passion by Ram Khandekar, Purva Patil & Sakshi Kosbe</i><br>
+  <i>MGM College of Engineering – FSJP Project</i>
+</p>
 
 ---
 
-## 🧩 Tech Stack
-
-| Layer | Technology | Description |
-|:------|:------------|:-------------|
-| Frontend | **React** + **Tailwind CSS** + **Framer Motion** | Modern, responsive, animated UI |
-| Backend | **Supabase** | Authentication + Database + Realtime |
-| API | **PokéAPI** | Fetches Pokémon data, stats, evolutions, and forms |
-| Deployment | **Vercel** | Fast, serverless deployment |
-| Database Schema | `users`, `caught_pokemon`, `favorites`, `wanted_pokemon`, `badges` | Tracks trainer progress |
+## 🧩 Overview  
+Poke-Dex is a sleek, full-stack Pokémon web app that brings the Poké-world to life.  
+It’s not just a list — it’s an experience where you can explore, collect, and track your Pokémon with an intuitive interface and responsive design.
 
 ---
 
-## ⚙️ Setup Guide
+## 🌍 Vision  
+> “We built Poke-Dex to merge nostalgia with technology — where data meets discovery.”  
 
-### 1️⃣ Clone the repo
+Built to showcase full-stack skills and real-world app architecture, this project highlights how UI design, backend logic, and APIs can blend to make something fun *and* functional.
+
+---
+
+## 🛠 Tech Stack  
+| Layer | Technology | Notes |
+|:--|:--|:--|
+| **Frontend** | React, Tailwind CSS | Responsive, fast, and modern |
+| **Animations** | Framer Motion | Smooth transitions and effects |
+| **Backend / Auth** | Supabase | Secure authentication + database |
+| **API Source** | PokéAPI | Reliable data for all Pokémon |
+| **Deployment** | Vercel | Continuous & effortless deployment |
+
+---
+
+## 🎮 Core Features  
+💥 **Interactive Pokédex** – Browse Pokémon by name, type, or generation  
+🌗 **Dark / Light Mode** – Choose your vibe  
+📊 **Progress Tracker** – Mark Pokémon as caught, wanted, or favourite  
+🔎 **Smart Search** – Instantly find your next catch  
+🎨 **Dynamic UI** – Built with animation & responsive layouts  
+💫 **User Auth (Login/Signup)** – Secure, simple, and smooth  
+
+---
+
+## 🧭 Getting Started  
+
+### 1️⃣ Clone the repo  
 ```bash
-git clone https://github.com/ASTA91-GIT/dex-tracker-pro.git
-cd dex-tracker-pro
+git clone https://github.com/ASTA91-GIT/Poke-Dex.git
+cd Poke-Dex
+2️⃣ Install dependencies
+bash
+Copy code
+npm install
+3️⃣ Configure environment
+Create a .env file and add your Supabase keys:
+
+ini
+Copy code
+VITE_SUPABASE_URL=your_url
+VITE_SUPABASE_ANON_KEY=your_key
+4️⃣ Run the app
+bash
+Copy code
+npm run dev
+Then open http://localhost:3000
+
+🧱 Folder Structure
+bash
+Copy code
+/public
+/src
+ ├── components/
+ ├── pages/
+ ├── styles/
+ ├── assets/
+ └── supabase/
+.env
+👥 Team
+Name	Role	Focus
+Ram Khandekar	Full Stack Developer	Backend, API integration
+Purva Patil	Frontend Developer	UI/UX Design, Animations
+Sakshi Kosbe	Developer & Tester	Logic, State, Testing
+
+🧑‍🏫 Project under: MGM College of Engineering (FSJP)
+
+🚀 Future Enhancements
+🎯 Gamification – Earn badges & XP for catching Pokémon
+
+🔔 Notifications – Get alerts on new Pokémon releases
+
+🧩 Offline Mode (PWA) – Catch ’em all, even offline
+
+🧠 AI Recommendations – Suggest Pokémon based on user activity
+
+📈 Analytics Dashboard – Visualize progress & type stats
+
+💬 Acknowledgements
+PokéAPI for the amazing dataset
+
+MGM College of Engineering Faculty for mentorship
+
+Every Pokémon Trainer who still believes in “Gotta catch ’em all!”
+
+<p align="center"> <b>✨ Built with ❤️ by Team Poke-Dex ✨</b><br> <i>“Where Code Meets Adventure.”</i> </p>
