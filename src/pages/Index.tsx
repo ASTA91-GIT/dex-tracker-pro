@@ -1,7 +1,20 @@
 import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
 import { Navigation } from "@/components/Navigation";
-import { Zap, Target, TrendingUp } from "lucide-react";
+import { 
+  Search, 
+  Sparkles, 
+  GitCompare, 
+  Zap, 
+  Users, 
+  BookOpen, 
+  Sword, 
+  Award, 
+  Shuffle,
+  Calculator,
+  HelpCircle,
+  Eye
+} from "lucide-react";
 import heroImage from "@/assets/hero-pokemon.jpg";
 
 const Index = () => {
@@ -10,9 +23,9 @@ const Index = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative pt-24 pb-16 overflow-hidden">
+      <section className="relative pt-24 pb-12 overflow-hidden">
         <div 
-          className="absolute inset-0 opacity-20"
+          className="absolute inset-0 opacity-10 dark:opacity-5"
           style={{
             backgroundImage: `url(${heroImage})`,
             backgroundSize: 'cover',
@@ -21,109 +34,84 @@ const Index = () => {
         />
         
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center space-y-8">
-            <div className="inline-block">
-              <span className="text-xs md:text-sm font-heading text-primary uppercase tracking-wider sparkle">
-                🌟 Trainer Mode Activated! 🌟
-              </span>
-            </div>
-            
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading leading-tight">
-              <span className="gradient-text">Gotta Catch</span>
+          <div className="max-w-4xl mx-auto text-center space-y-6">
+            <h1 className="text-5xl md:text-7xl font-heading leading-tight">
+              <span className="gradient-text">Your Ultimate</span>
               <br />
-              <span className="text-accent">'Em All!</span>
+              <span className="text-accent">Pokédex Hub</span>
             </h1>
             
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-              Track your Pokémon collection, explore the complete Pokédex, and become the ultimate Pokémon Master!
+              Explore, track, and master the world of Pokémon with powerful tools and features
             </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
-              <Link to="/pokedex">
-                <Button 
-                  size="lg" 
-                  className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg px-8 py-6 rounded-full shadow-lg hover:shadow-xl transition-all hover:scale-105"
-                >
-                  <Zap className="mr-2 h-5 w-5" />
-                  Explore Pokédex
-                </Button>
-              </Link>
-              
-              <Link to="/auth">
-                <Button 
-                  size="lg" 
-                  variant="outline"
-                  className="border-2 border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground font-bold text-lg px-8 py-6 rounded-full transition-all hover:scale-105"
-                >
-                  <Target className="mr-2 h-5 w-5" />
-                  Start Journey
-                </Button>
-              </Link>
-            </div>
           </div>
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-16 bg-muted/30">
+      {/* Feature Cards Grid */}
+      <section className="py-12 pb-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-heading text-center mb-12">
-            <span className="gradient-text">Trainer Features</span>
-          </h2>
-          
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
             {[
-              {
-                icon: Target,
-                title: "Complete Pokédex",
-                description: "Browse all Pokémon from Gen 1 to the latest generation with detailed stats and info"
-              },
-              {
-                icon: TrendingUp,
-                title: "Track Progress",
-                description: "Monitor your collection and see how close you are to becoming a Pokémon Master"
-              },
-              {
-                icon: Zap,
-                title: "Real-Time Updates",
-                description: "Stay up-to-date with the latest Pokémon data from the official PokéAPI"
-              }
+              { icon: Search, title: "Pokédex", to: "/pokedex", color: "text-red-500" },
+              { icon: Sparkles, title: "My Collection", to: "/collection", color: "text-yellow-500" },
+              { icon: GitCompare, title: "Compare", to: "/pokedex", color: "text-blue-500" },
+              { icon: Zap, title: "Evolution", to: "/evolution-stones", color: "text-purple-500" },
+              { icon: Calculator, title: "Type Calculator", to: "/type-calculator", color: "text-green-500" },
+              { icon: Sword, title: "Battle", to: "/battle", color: "text-orange-500" },
+              { icon: Users, title: "Characters", to: "/characters", color: "text-pink-500" },
+              { icon: BookOpen, title: "Lore", to: "/lore", color: "text-indigo-500" },
+              { icon: HelpCircle, title: "Quiz", to: "/quiz", color: "text-cyan-500" },
+              { icon: Eye, title: "Guess Game", to: "/guess", color: "text-teal-500" },
+              { icon: Award, title: "Leaderboard", to: "/leaderboard", color: "text-amber-500" },
+              { icon: Shuffle, title: "Random", to: "/random", color: "text-rose-500" },
             ].map((feature, index) => (
-              <div 
-                key={index}
-                className="bg-card rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all hover-float border border-border"
-              >
-                <div className="bg-primary/10 w-12 h-12 rounded-full flex items-center justify-center mb-4">
-                  <feature.icon className="h-6 w-6 text-primary" />
-                </div>
-                <h3 className="font-heading text-lg mb-2">{feature.title}</h3>
-                <p className="text-muted-foreground">{feature.description}</p>
-              </div>
+              <Link key={index} to={feature.to}>
+                <Card className="group h-full hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer border-2 hover:border-primary/50 bg-card/50 backdrop-blur">
+                  <CardContent className="flex flex-col items-center justify-center p-6 space-y-3">
+                    <div className="bg-primary/10 dark:bg-primary/20 w-14 h-14 rounded-2xl flex items-center justify-center group-hover:bg-primary/20 dark:group-hover:bg-primary/30 transition-colors">
+                      <feature.icon className={`h-7 w-7 ${feature.color}`} />
+                    </div>
+                    <h3 className="font-heading text-sm text-center group-hover:text-primary transition-colors">
+                      {feature.title}
+                    </h3>
+                  </CardContent>
+                </Card>
+              </Link>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16">
+      {/* About Section */}
+      <section className="py-12 bg-muted/30">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center space-y-6 bg-gradient-to-r from-secondary/20 to-primary/20 rounded-3xl p-8 md:p-12 border border-primary/20">
-            <h2 className="text-3xl md:text-4xl font-heading">
-              Ready to Start Your
-              <br />
-              <span className="gradient-text">Pokémon Journey?</span>
-            </h2>
-            <p className="text-lg text-muted-foreground">
-              Join thousands of trainers tracking their Pokémon collections!
-            </p>
-            <Link to="/auth">
-              <Button 
-                size="lg"
-                className="bg-accent hover:bg-accent/90 text-accent-foreground font-bold text-lg px-8 py-6 rounded-full shadow-lg hover:shadow-xl transition-all hover:scale-105"
-              >
-                Become a Trainer
-              </Button>
-            </Link>
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center space-y-4 mb-12">
+              <h2 className="text-3xl md:text-4xl font-heading">
+                <span className="gradient-text">About PokéTrack</span>
+              </h2>
+              <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+                Your comprehensive companion for all things Pokémon. Track your collection, 
+                discover evolution paths, battle strategies, and connect with fellow trainers.
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-3 gap-6">
+              {[
+                { icon: Search, title: "Complete Database", desc: "Access info on all Pokémon" },
+                { icon: Zap, title: "Real-Time Data", desc: "Always up-to-date information" },
+                { icon: Users, title: "Community", desc: "Connect with trainers worldwide" }
+              ].map((item, idx) => (
+                <div key={idx} className="text-center space-y-3 p-6 rounded-2xl bg-background/50">
+                  <div className="bg-primary/10 w-12 h-12 rounded-full flex items-center justify-center mx-auto">
+                    <item.icon className="h-6 w-6 text-primary" />
+                  </div>
+                  <h3 className="font-heading text-lg">{item.title}</h3>
+                  <p className="text-sm text-muted-foreground">{item.desc}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>

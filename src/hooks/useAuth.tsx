@@ -61,7 +61,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     }
 
     toast.success("Trainer Mode Activated! Welcome aboard!");
-    navigate("/dashboard");
+    navigate("/");
   };
 
   const signIn = async (email: string, password: string) => {
@@ -76,7 +76,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     }
 
     toast.success("Welcome back, Trainer!");
-    navigate("/dashboard");
+    navigate("/");
   };
 
   const signOut = async () => {

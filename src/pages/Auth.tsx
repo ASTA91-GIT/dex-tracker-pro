@@ -16,7 +16,7 @@ const Auth = () => {
 
   useEffect(() => {
     if (user) {
-      navigate("/dashboard");
+      navigate("/");
     }
   }, [user, navigate]);
 
@@ -111,6 +111,7 @@ const Auth = () => {
                           placeholder="••••••••"
                           className="pl-10"
                           required
+                          minLength={8}
                         />
                       </div>
                     </div>
@@ -165,7 +166,7 @@ const Auth = () => {
                           placeholder="••••••••"
                           className="pl-10"
                           required
-                          minLength={6}
+                          minLength={8}
                         />
                       </div>
                     </div>
