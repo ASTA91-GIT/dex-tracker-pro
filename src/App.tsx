@@ -22,6 +22,9 @@ import RandomPokemon from "./pages/RandomPokemon";
 import Collection from "./pages/Collection";
 import EvolutionStones from "./pages/EvolutionStones";
 import PokemonLore from "./pages/PokemonLore";
+import PokeFusion from "./pages/PokeFusion";
+import TrainerJournal from "./pages/TrainerJournal";
+import HabitTracker from "./pages/HabitTracker";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -52,6 +55,9 @@ const App = () => (
             <Route path="/collection" element={<Collection />} />
             <Route path="/evolution-stones" element={<EvolutionStones />} />
             <Route path="/lore" element={<PokemonLore />} />
+            <Route path="/fusion" element={<PokeFusion />} />
+            <Route path="/journal" element={<TrainerJournal />} />
+            <Route path="/habits" element={<HabitTracker />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

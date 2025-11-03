@@ -76,6 +76,36 @@ export type Database = {
         }
         Relationships: []
       }
+      daily_mystery: {
+        Row: {
+          created_at: string
+          date: string
+          guessed: boolean | null
+          id: string
+          points: number | null
+          pokemon_id: number
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          date?: string
+          guessed?: boolean | null
+          id?: string
+          points?: number | null
+          pokemon_id: number
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          date?: string
+          guessed?: boolean | null
+          id?: string
+          points?: number | null
+          pokemon_id?: number
+          user_id?: string
+        }
+        Relationships: []
+      }
       favorites: {
         Row: {
           added_at: string | null
@@ -107,6 +137,42 @@ export type Database = {
             referencedColumns: ["id"]
           },
         ]
+      }
+      habit_tracker: {
+        Row: {
+          completed_dates: Json | null
+          created_at: string
+          description: string | null
+          habit_name: string
+          id: string
+          pokemon_id: number
+          pokemon_name: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          completed_dates?: Json | null
+          created_at?: string
+          description?: string | null
+          habit_name: string
+          id?: string
+          pokemon_id: number
+          pokemon_name: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          completed_dates?: Json | null
+          created_at?: string
+          description?: string | null
+          habit_name?: string
+          id?: string
+          pokemon_id?: number
+          pokemon_name?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
       }
       legendary_pokemon: {
         Row: {
@@ -235,6 +301,36 @@ export type Database = {
           id?: string
           pokemon_slots?: Json
           team_name?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      trainer_journal: {
+        Row: {
+          created_at: string
+          id: string
+          note: string
+          pokemon_id: number
+          pokemon_name: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          note: string
+          pokemon_id: number
+          pokemon_name: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          note?: string
+          pokemon_id?: number
+          pokemon_name?: string
           updated_at?: string
           user_id?: string
         }

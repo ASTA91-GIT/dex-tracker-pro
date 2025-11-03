@@ -3,6 +3,7 @@ import { Navigation } from "@/components/Navigation";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { VoiceSearch } from "@/components/VoiceSearch";
 import { Search, Loader2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { useNavigate } from "react-router-dom";
@@ -108,15 +109,18 @@ const Pokedex = () => {
           </div>
 
           {/* Search */}
-          <div className="relative max-w-md mx-auto mb-8">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-muted-foreground" />
-            <Input
-              type="text"
-              placeholder="Search Pokémon..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="pl-10 h-12 rounded-full border-2"
-            />
+          <div className="flex gap-2 max-w-md mx-auto mb-8">
+            <div className="relative flex-1">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-muted-foreground" />
+              <Input
+                type="text"
+                placeholder="Search Pokémon..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="pl-10 h-12 rounded-full border-2"
+              />
+            </div>
+            <VoiceSearch onSearch={setSearchTerm} />
           </div>
 
           {/* Loading State */}

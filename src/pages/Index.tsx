@@ -4,16 +4,14 @@ import { Navigation } from "@/components/Navigation";
 import { 
   Search, 
   Sparkles, 
-  GitCompare, 
   Zap, 
   Users, 
   BookOpen, 
   Sword, 
-  Award, 
-  Shuffle,
   Calculator,
   HelpCircle,
-  Eye
+  Eye,
+  Target
 } from "lucide-react";
 import heroImage from "@/assets/hero-pokemon.jpg";
 
@@ -55,16 +53,16 @@ const Index = () => {
             {[
               { icon: Search, title: "Pokédex", to: "/pokedex", color: "text-red-500" },
               { icon: Sparkles, title: "My Collection", to: "/collection", color: "text-yellow-500" },
-              { icon: GitCompare, title: "Compare", to: "/pokedex", color: "text-blue-500" },
-              { icon: Zap, title: "Evolution", to: "/evolution-stones", color: "text-purple-500" },
-              { icon: Calculator, title: "Type Calculator", to: "/type-calculator", color: "text-green-500" },
+              { icon: Sparkles, title: "PokéFusion", to: "/fusion", color: "text-purple-500" },
+              { icon: BookOpen, title: "Trainer Journal", to: "/journal", color: "text-blue-500" },
+              { icon: Target, title: "Habit Tracker", to: "/habits", color: "text-green-500" },
+              { icon: Calculator, title: "Type Calculator", to: "/type-calculator", color: "text-cyan-500" },
+              { icon: Zap, title: "Evolution", to: "/evolution-stones", color: "text-amber-500" },
               { icon: Sword, title: "Battle", to: "/battle", color: "text-orange-500" },
               { icon: Users, title: "Characters", to: "/characters", color: "text-pink-500" },
               { icon: BookOpen, title: "Lore", to: "/lore", color: "text-indigo-500" },
-              { icon: HelpCircle, title: "Quiz", to: "/quiz", color: "text-cyan-500" },
-              { icon: Eye, title: "Guess Game", to: "/guess", color: "text-teal-500" },
-              { icon: Award, title: "Leaderboard", to: "/leaderboard", color: "text-amber-500" },
-              { icon: Shuffle, title: "Random", to: "/random", color: "text-rose-500" },
+              { icon: HelpCircle, title: "Quiz", to: "/quiz", color: "text-teal-500" },
+              { icon: Eye, title: "Guess Game", to: "/guess", color: "text-rose-500" },
             ].map((feature, index) => (
               <Link key={index} to={feature.to}>
                 <Card className="group h-full hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer border-2 hover:border-primary/50 bg-card/50 backdrop-blur">

@@ -59,6 +59,15 @@ export const Navigation = () => {
                     </DropdownMenuItem>
                   </>
                 )}
+                <DropdownMenuItem asChild>
+                  <Link to="/fusion" className="cursor-pointer">PokéFusion Lab</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/journal" className="cursor-pointer">Trainer Journal</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/habits" className="cursor-pointer">Habit Tracker</Link>
+                </DropdownMenuItem>
                 <DropdownMenuSeparator />
                 <DropdownMenuItem asChild>
                   <Link to="/team-builder" className="cursor-pointer">Team Builder</Link>
