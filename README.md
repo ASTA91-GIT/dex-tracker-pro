@@ -46,28 +46,29 @@ Built to showcase full-stack skills and real-world app architecture, this projec
 ## 🧭 Getting Started  
 
 ### 1️⃣ Clone the repo  
-```bash
 git clone https://github.com/ASTA91-GIT/Poke-Dex.git
 cd Poke-Dex
+
 2️⃣ Install dependencies
-bash
 Copy code
 npm install
+
 3️⃣ Configure environment
 Create a .env file and add your Supabase keys:
-
 ini
 Copy code
 VITE_SUPABASE_URL=your_url
 VITE_SUPABASE_ANON_KEY=your_key
+
 4️⃣ Run the app
-bash
 Copy code
 npm run dev
 Then open http://localhost:3000
 
+---
+
 🧱 Folder Structure
-bash
+
 Copy code
 /public
 /src
@@ -77,13 +78,19 @@ Copy code
  ├── assets/
  └── supabase/
 .env
+
+---
+
 👥 Team
-Name	Role	Focus
-Ram Khandekar	Full Stack Developer	Backend, API integration
-Purva Patil	Frontend Developer	UI/UX Design, Animations
-Sakshi Kosbe	Developer & Tester	Logic, State, Testing
+| Name              | Role                 | Focus                    |
+| :---------------- | :------------------- | :----------------------- |
+| **Ram Khandekar** | Full Stack Developer | Backend, API integration |
+| **Purva Patil**   | Frontend Developer   | UI/UX Design, Animations |
+| **Sakshi Kosbe**  | Developer & Tester   | Logic, State, Testing    |
 
 🧑‍🏫 Project under: MGM College of Engineering (FSJP)
+
+---
 
 🚀 Future Enhancements
 🎯 Gamification – Earn badges & XP for catching Pokémon
@@ -98,6 +105,8 @@ Sakshi Kosbe	Developer & Tester	Logic, State, Testing
 
 💬 Acknowledgements
 PokéAPI for the amazing dataset
+
+---
 
 MGM College of Engineering Faculty for mentorship
 
