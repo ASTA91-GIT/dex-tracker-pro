@@ -123,20 +123,33 @@ All colors MUST be HSL.
 }
 
 @layer utilities {
-  .sparkle {
-    animation: sparkle 2s ease-in-out infinite;
-  }
+.sparkle {
+  animation: sparkle 2s ease-in-out infinite;
+}
 
-  @keyframes sparkle {
-    0%, 100% {
-      opacity: 1;
-      transform: scale(1);
-    }
-    50% {
-      opacity: 0.7;
-      transform: scale(1.05);
-    }
+@keyframes sparkle {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
   }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.05);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
 
   .hover-float {
     transition: transform 0.3s ease;
